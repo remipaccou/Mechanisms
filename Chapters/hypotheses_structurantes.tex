@@ -1,14 +1,235 @@
-python3 - <<'PY'
-from pathlib import Path
+ %*******************************************************
+% Des mécanismes aux hypothèses structurantes
+%*******************************************************
 
-p = Path("ClassicThesis.tex")
-s = p.read_text(encoding="utf-8")
+\chapter{Des mécanismes aux hypothèses structurantes}
+\label{ch:hypotheses-structurantes}
 
-needle = r"\include{Chapters/Chapter02}"
-insert = r"\include{Chapters/hypotheses_structurantes}"
+Les dimensions dégagées au chapitre précédent ne constituent pas une liste d'hypothèses indépendantes. Elles sont des plans d'observation. Chacune permet de voir une propriété économique des techniques informationnelles~: la nature du bien, la forme du capital, le travail, les rendements, la demande, le prix, l'organisation, le financement, la géographie, l'innovation. Mais les mécanismes décisifs ne restent pas contenus dans l'une ou l'autre de ces dimensions. Ils circulent entre elles. La forme du capital modifie la structure de marché~; la structure de marché oriente l'innovation~; l'innovation transforme la demande~; la demande reconfigure le système énergétique~; le système énergétique borne à son tour les trajectoires techniques. Une hypothèse structurante ne correspond donc pas à une dimension isolée, mais à un croisement stable entre plusieurs dimensions.
 
-if insert not in s:
-    s = s.replace(needle, needle + "\n" + insert)
+L'enjeu méthodologique est alors double. Il faut conserver la richesse mécanistique de l'analyse sans la dissoudre dans un catalogue, et préparer le passage vers les scénarios et la modélisation sans réduire la théorie à quelques paramètres. Les hypothèses du chapitre ne doivent donc pas être comprises comme des variables immédiatement injectables dans un modèle. Elles forment une architecture intermédiaire~: elles condensent les mécanismes observés historiquement, les rendent comparables entre domaines, et définissent les régimes de couplage que la modélisation pourra ensuite explorer partiellement.
 
-p.write_text(s, encoding="utf-8")
-PY
+Cette architecture repose sur une distinction de niveaux. Au premier niveau se trouve l'hypothèse-mère, qui définit l'objet même de la thèse. Au deuxième se trouve un fait structural organisateur~: le couplage entre information et électricité. Au troisième se trouvent les hypothèses structurantes proprement dites. Au quatrième se trouvent les mécanismes médiateurs, qui détaillent les canaux causaux par lesquels les hypothèses se réalisent. Au cinquième se trouvent les cas empiriques, qui instancient ces mécanismes dans des contextes situés. Au sixième se trouvent les faits stylisés, qui condensent les régularités observables. Enfin, au septième niveau se trouvent les régimes scénaristiques, qui organisent les configurations futures possibles.
+
+\section{Forme canonique des mécanismes}
+
+Les mécanismes identifiés dans ce chapitre ne doivent pas être formulés comme des effets moyens du type~: l'ICT augmente la productivité, l'ICT réduit les coûts de transaction, l'ICT concentre les marchés, l'ICT accroît ou réduit la demande d'énergie. Ces formulations sont trop générales. Elles effacent les conditions d'activation, confondent des fonctions informationnelles différentes et transforment des relations causales conditionnelles en affirmations quasi universelles.
+
+La forme canonique retenue est la suivante~:
+
+\begin{quote}
+Sous conditions \(X\), une fonction informationnelle \(F\), insérée dans un régime économique \(R\), tend à produire un effet \(Y\) par le mécanisme \(M\), avec une portée limitée par \(L\).
+\end{quote}
+
+Cette formulation impose cinq exigences. Elle oblige d'abord à préciser les conditions sous lesquelles le mécanisme s'active. Elle oblige ensuite à distinguer la fonction informationnelle concernée~: transmettre, stocker ou calculer. Elle situe cette fonction dans un régime économique déterminé~: marché concurrentiel, infrastructure propriétaire, plateforme, organisation intégrée, système public, régime de financement spéculatif ou dispositif régulé. Elle nomme le canal causal. Enfin, elle explicite les limites du mécanisme~: contraintes physiques, institutionnelles, sociales, financières, organisationnelles ou politiques.
+
+Ainsi, l'affirmation selon laquelle le calcul accroît la demande d'énergie est insuffisante. Une formulation mécanistique dira plutôt~:
+
+\begin{quote}
+Sous conditions de forte extensibilité de la demande et de baisse rapide du coût unitaire du calcul, la fonction calculer, insérée dans un régime économique orienté vers l'automatisation et la valorisation des données, tend à accroître le volume agrégé d'opérations informationnelles par induction de nouveaux usages, automatisation de tâches auparavant non rentables et recomposition des modèles d'affaires~; cet effet est limité par les contraintes de financement, d'énergie, de compétences, de régulation et d'acceptabilité sociale.
+\end{quote}
+
+La première formulation décrit un résultat possible. La seconde identifie un mécanisme testable.
+
+\section{Hypothèse-mère}
+
+\subsection{H-MÈRE --- L'ICT est une infrastructure fonctionnelle de transformation de l'information, non un choc homogène}
+
+Les technologies de l'information et de la communication ne constituent pas un objet économique homogène. Elles doivent être analysées comme une infrastructure fonctionnelle articulant trois opérations fondamentales~: transmettre, stocker et calculer. Les effets économiques du numérique dépendent de la fonction informationnelle dominante, du substrat matériel qui la porte, du régime d'appropriation du capital et des institutions dans lesquelles elle s'insère.
+
+Cette hypothèse-mère fonde l'ensemble de la thèse. Elle interdit de traiter l'ICT comme un simple choc de productivité, comme une externalité technologique indifférenciée ou comme une technologie à usage général homogène. Elle explique également pourquoi l'histoire longue des techniques informationnelles est nécessaire~: il faut observer séparément la transmission, le stockage et le calcul avant de comprendre leur convergence contemporaine.
+
+La convergence numérique ne rend pas ces fonctions identiques. Elle les rassemble dans un même substrat technique, mais leurs effets économiques restent différenciés. Une infrastructure contemporaine de cloud computing transmet, stocke et calcule simultanément~; cela ne signifie pas que les mécanismes économiques de transmission, de stockage et de calcul soient devenus équivalents. La puissance du régime numérique tient précisément à leur combinaison.
+
+\section{Fait structural organisateur}
+
+\subsection{FSO --- La convergence numérique produit un couplage structurel entre information et électricité}
+
+Le couplage entre ICT et électricité n'est pas un effet secondaire de la numérisation. Il constitue le fait structural organisateur de la thèse.
+
+Dans les régimes pré-numériques, les fonctions informationnelles restent matériellement hétérogènes. La transmission peut passer par un signal optique, un câble télégraphique, une onde radio ou une ligne téléphonique. Le stockage peut prendre la forme du papier, de la carte perforée, de l'archive administrative ou du support magnétique. Le calcul peut relever du travail humain, de la machine mécanique, de la calculatrice électromécanique ou du mainframe. Ces fonctions consomment de l'énergie, mais elles ne sont pas encore unifiées par un appel permanent et extensible à l'infrastructure électrique.
+
+La convergence numérique modifie ce régime. Transmission, stockage et calcul deviennent des opérations électriques, continues, interconnectées et extensibles par investissement infrastructurel. L'information cesse alors d'être seulement un instrument de coordination de l'économie. Elle devient elle-même une demande électrique structurante. Elle appelle des centres de données, des réseaux, des équipements terminaux, des semi-conducteurs, des systèmes de refroidissement, des contrats d'approvisionnement électrique, des capacités réseau et des chaînes d'approvisionnement matérielles.
+
+Le numérique ne se contente donc pas de coordonner le système énergétique. Il devient un élément du système énergétique. Il ne peut plus être représenté seulement comme une couche d'efficacité placée au-dessus de l'économie réelle. Il devient un lieu où se recomposent simultanément la demande d'électricité, les formes d'investissement, la géographie productive, la structure du capital et les institutions de gouvernance.
+
+La manière dont ce couplage est organisé oriente ensuite les effets économiques et climatiques du numérique. S'il est organisé par le seul signal-prix, il tend à optimiser ce que le prix rend visible. S'il est organisé par des objectifs de souveraineté, il tend à sécuriser des capacités. S'il est organisé par des plateformes, il tend à concentrer les infrastructures et les données. S'il est organisé par des objectifs climatiques explicites, il peut devenir un support de flexibilité, d'efficacité et de pilotage de la transition. Le problème central n'est donc pas seulement que l'ICT consomme de l'électricité~; il est que la croissance informationnelle devient structurellement dépendante de la forme institutionnelle donnée à l'électricité.
+
+\section{Hypothèses structurantes}
+
+\subsection{H1 --- Différenciation fonctionnelle des effets économiques}
+
+Les trois fonctions informationnelles n'activent pas les mêmes mécanismes économiques. La transmission agit prioritairement sur la distance, la vitesse de coordination, la synchronisation des marchés et la circulation des signaux. Le stockage agit sur la mémoire organisationnelle, l'accumulation, la traçabilité, la preuve, le contrôle et l'appropriation. Le calcul agit sur la décision, l'automatisation, la simulation, la prévision, la productivité apparente et la demande énergétique.
+
+La convergence numérique combine ces effets sans les annuler. Une même infrastructure peut transmettre, stocker et calculer, mais chaque fonction continue de modifier une dimension différente de l'économie. La transmission réduit certaines frictions de coordination~; le stockage rend durable et appropriable l'information~; le calcul transforme la décision en opération automatisable. Les effets contemporains du numérique résultent de leur superposition.
+
+\paragraph{Forme canonique.}
+Sous conditions de convergence technique, les fonctions transmettre, stocker et calculer, insérées dans une infrastructure numérique commune, tendent à produire des effets économiques combinés mais non homogènes, parce que chaque fonction modifie une dimension distincte de la coordination, de l'accumulation et de la décision.
+
+\subsection{H2 --- Le régime d'appropriation du capital informationnel structure les marchés}
+
+La structure de marché associée à une technologie informationnelle dépend moins de sa seule fonction technique que du régime d'appropriation du capital qui la porte. Un outil vendu, une machine louée, un service hébergé, une infrastructure propriétaire, une plateforme ou un système intégré ne produisent pas les mêmes effets de concentration, de dépendance et de verrouillage.
+
+Deux technologies proches par leur fonction peuvent produire des mondes économiques différents si leur capital n'est pas approprié de la même manière. Une calculatrice vendue comme outil autonome diffuse une capacité de calcul sans créer nécessairement une dépendance durable au fournisseur. Une tabulatrice louée avec maintenance, cartes, formats et services associés installe au contraire une relation de dépendance organisationnelle. La fonction technique importe, mais la forme économique du capital décide de la structure de marché.
+
+\paragraph{Forme canonique.}
+Sous conditions de forte spécificité d'actifs, de maintenance propriétaire, de dépendance aux standards, d'intégration organisationnelle ou de contrôle des données, une technologie informationnelle tend à produire de la concentration par verrouillage du capital informationnel, même lorsque l'information traitée possède des propriétés de non-rivalité.
+
+\subsection{H3 --- L'efficacité informationnelle est expansive lorsque la demande est extensible}
+
+Les gains d'efficacité informationnelle réduisent le coût unitaire de transmission, de stockage ou de calcul. Mais lorsque la demande de service informationnel est extensible, cette baisse du coût unitaire peut accroître le volume agrégé d'usage.
+
+L'efficacité ne produit donc pas mécaniquement une réduction de l'empreinte. Elle peut déplacer la frontière des usages rentables, rendre solvables de nouvelles pratiques, automatiser des tâches auparavant trop coûteuses, intensifier les interactions ou élargir les marchés. Ce mécanisme ne correspond pas seulement au rebond classique, où une économie réalisée sur un service existant augmente sa consommation. Il inclut aussi l'induction~: l'apparition de demandes nouvelles rendues possibles par la baisse du coût informationnel.
+
+\paragraph{Forme canonique.}
+Sous conditions de demande extensible et de baisse rapide du coût unitaire d'une fonction informationnelle, les gains d'efficacité tendent à accroître le volume agrégé d'usage par induction de nouvelles pratiques, extension des marchés ou automatisation de tâches auparavant non rentables~; cet effet est limité par les contraintes physiques, institutionnelles, financières et sociales qui bornent l'expansion des usages.
+
+\subsection{H4 --- L'information transforme les formes de coordination}
+
+Les technologies informationnelles ne réduisent pas seulement les coûts de transaction. Elles transforment les formes de coordination économique.
+
+Lorsque le système de prix ne suffit pas à coordonner des flux complexes, rapides, interdépendants ou spatialement dispersés, l'économie produit des dispositifs informationnels alternatifs~: hiérarchies, standards, systèmes de reporting, plateformes, protocoles, tableaux de bord, algorithmes. L'ICT ne remplace donc pas simplement le marché ou la firme. Elle redéfinit leur frontière.
+
+Ce point est particulièrement important pour les systèmes énergétiques contemporains. La coordination d'un réseau électrique fortement renouvelable, flexible et décentralisé ne peut pas être comprise comme une simple optimisation par le prix. Elle suppose des dispositifs informationnels de prévision, de contrôle, de dispatch, d'équilibrage et de confiance. Mais ces dispositifs n'optimisent jamais dans le vide. Ils optimisent le signal, l'objectif ou la contrainte que l'institution leur donne.
+
+\paragraph{Forme canonique.}
+Sous conditions d'interdépendance forte, de temporalité courte ou de rivalité physique des flux, une infrastructure informationnelle tend à déplacer la coordination du prix vers des dispositifs organisationnels, hiérarchiques ou algorithmiques, parce que le signal-prix ne peut pas agréger assez rapidement l'information requise pour l'action.
+
+\subsection{H5 --- La dématérialisation apparente repose sur une matérialité déplacée}
+
+La puissance économique de l'information ne repose pas sur la disparition de la matière, mais sur son déplacement. Les infrastructures informationnelles rendent certains flux plus abstraits, plus rapides, plus mesurables et plus coordonnables. Mais elles le font au prix d'un substrat matériel et énergétique~: supports de stockage, câbles, antennes, machines, semi-conducteurs, alimentation électrique, refroidissement, bâtiments, réseaux, métaux, eau, compétences et maintenance.
+
+L'invisibilité de ce substrat ne signifie pas son absence. Elle résulte souvent d'un déplacement spatial, sectoriel ou comptable. Les gains informationnels apparaissent au niveau de l'usage~; les coûts matériels se logent souvent en amont, dans l'infrastructure. C'est pourquoi l'analyse de l'ICT ne peut pas se limiter aux usages numériques visibles. Elle doit suivre les chaînes physiques qui rendent ces usages possibles.
+
+\paragraph{Forme canonique.}
+Sous conditions de numérisation croissante des fonctions de coordination, l'économie tend à rendre certains flux plus abstraits et plus rapides en substituant à des frictions visibles une infrastructure matérielle déplacée vers l'amont~; la dématérialisation observée au niveau des usages correspond alors à une rematérialisation infrastructurelle partiellement occultée.
+
+\subsection{H6 --- La direction du changement technique numérique est endogène}
+
+La trajectoire du progrès informationnel n'est pas neutre. Elle est orientée par les marchés, les institutions, les standards, les régimes de financement, les anticipations de rente, les formes de concurrence, les contraintes physiques et les cadres de régulation.
+
+Les technologies numériques ne suivent donc pas mécaniquement une trajectoire d'efficacité sociale. Elles sont sélectionnées par des régimes économiques qui favorisent certaines directions~: automatisation, consommation, surveillance, optimisation, intensification du calcul, intégration propriétaire, ou au contraire sobriété, interopérabilité, maintenance, réemploi, efficacité énergétique et finalités collectives.
+
+Cette hypothèse ouvre directement vers les scénarios. Si la direction technique est endogène, alors l'avenir numérique ne peut pas être représenté comme une simple extrapolation de tendances. Il doit être formulé comme un espace de régimes possibles, selon que les institutions orientent ou non l'innovation vers des objectifs collectifs.
+
+\paragraph{Forme canonique.}
+Sous conditions de marchés concentrés, de rendements croissants, de financement abondant et de signal-prix matériel atténué, l'innovation numérique tend à s'orienter vers les usages les plus rentables ou les plus extensibles plutôt que vers les usages socialement ou énergétiquement optimaux~; cette direction peut être infléchie par la régulation, les standards, la fiscalité, la commande publique ou les contraintes physiques.
+
+\section{Mécanismes médiateurs}
+
+Les hypothèses structurantes n'épuisent pas les mécanismes. Elles les organisent. Les mécanismes médiateurs constituent le niveau où l'analyse devient opérationnelle. Ils décrivent les canaux par lesquels les hypothèses précédentes se réalisent dans des cas concrets.
+
+\paragraph{Rivalité des supports.}
+L'information peut être non rivale dans son contenu, mais les supports qui la transmettent, la stockent ou la calculent restent rivaux. Un message peut être copié à faible coût~; un câble, une fréquence, un serveur, un terminal, une capacité de calcul ou un espace mémoire ne le peuvent pas sans coût.
+
+\paragraph{Excluabilité reconstruite par le service.}
+Même lorsque l'information est reproductible, les acteurs économiques peuvent reconstruire de l'excluabilité par les licences, les formats, les abonnements, les interfaces, les standards propriétaires, les API, les contrats de maintenance, les données fermées ou l'hébergement.
+
+\paragraph{Verrouillage par intégration organisationnelle.}
+Plus une technologie informationnelle est intégrée aux routines, aux compétences, aux bases de données, aux standards et aux processus d'une organisation, plus son remplacement devient coûteux. Le verrouillage ne vient donc pas seulement des effets de réseau externes. Il vient aussi de l'incorporation interne de la technologie dans l'organisation.
+
+\paragraph{Demande induite.}
+La baisse du coût unitaire d'une opération informationnelle ne satisfait pas seulement une demande préexistante. Elle peut faire apparaître des usages qui n'étaient pas économiquement possibles auparavant. La demande d'information est donc partiellement produite par l'infrastructure qui la rend accessible.
+
+\paragraph{Substitution partielle entre information et stocks physiques.}
+L'information en temps réel peut réduire certains besoins de stocks, de redondance ou de déplacement. Mais elle ne les supprime pas nécessairement. Elle les reconfigure. La substitution entre information et matière est rarement complète.
+
+\paragraph{Coordination algorithmique.}
+Les algorithmes ne remplacent pas seulement des décisions humaines. Ils transforment la temporalité, la fréquence et la fidélité de la coordination. Une règle approximative appliquée lentement peut laisser certaines distorsions inexploitées~; un algorithme appliqué fréquemment peut les activer systématiquement.
+
+\paragraph{Market-misalignment effect.}
+Lorsque le signal optimisé diverge de la variable environnementale pertinente, l'optimisation peut transformer une distorsion latente en dommage réalisé. Ce mécanisme ne relève pas du rebond classique~: il n'implique pas nécessairement une augmentation de la demande finale. Il relève d'une mauvaise correspondance entre le signal de coordination et la rareté biophysique.
+
+\paragraph{Optimization fidelity.}
+Un système algorithmique exécute avec une fidélité élevée l'objectif qui lui est assigné. Cette fidélité peut produire des bénéfices lorsque l'objectif privé est aligné avec l'objectif collectif. Elle peut produire des effets adverses lorsque le prix, le coût ou l'indicateur optimisé omet une externalité décisive.
+
+\paragraph{Financement par anticipation de rente.}
+Les infrastructures informationnelles lourdes sont souvent financées avant que la demande réalisée ne justifie l'investissement. Elles reposent sur des anticipations de rente, de monopole, de contrôle, de souveraineté ou de marché futur. Ce mécanisme explique les cycles de promesse, de surinvestissement, de faillite, de consolidation et de normalisation.
+
+\paragraph{Déplacement géographique de la matérialité.}
+Les effets informationnels peuvent être visibles dans un lieu tandis que leurs coûts matériels se concentrent ailleurs~: extraction, fabrication, assemblage, câbles, réseaux, énergie, eau, déchets, maintenance. Le numérique déplace la matérialité autant qu'il la rend invisible.
+
+\paragraph{Dépendance de sentier.}
+Les infrastructures informationnelles installées créent leurs propres trajectoires~: standards, compétences, données, routines, compatibilités, contrats, équipements. Une fois la trajectoire engagée, le coût du changement augmente.
+
+\section{Cas micro et mécanismes locaux}
+
+Les cas micro ne sont pas des illustrations anecdotiques d'une théorie macro. Ils sont des lieux d'observation où un mécanisme devient visible parce que les conditions d'activation sont suffisamment identifiables.
+
+Un cas d'optimisation de microgrid par intelligence artificielle en fournit un exemple. La solution technique reste identique d'un site à l'autre~: elle observe des données, prévoit des conditions de réseau, arbitre entre importation, autoconsommation, stockage et exportation, puis optimise un objectif. Pourtant, les effets environnementaux divergent selon les contextes. Lorsque le prix de l'électricité est aligné avec l'intensité carbone, l'optimisation économique peut produire un bénéfice environnemental. Lorsque le prix reflète la rareté marchande mais non le carbone, l'optimisation économique peut accroître les émissions.
+
+Ce cas se situe à l'intersection du fait structural organisateur et des hypothèses H4 et H6. Il montre d'abord que le numérique est devenu un organe de pilotage du système électrique~: le calcul ne se contente pas de consommer de l'électricité, il organise des flux électriques. Il montre ensuite que la coordination algorithmique amplifie le signal qu'elle reçoit. Enfin, il montre que la direction environnementale du résultat ne dépend pas de l'intelligence de l'algorithme, mais de l'alignement institutionnel entre la fonction objectif et la contrainte biophysique pertinente.
+
+Sa forme canonique est la suivante~:
+
+\begin{quote}
+Sous conditions de signal-prix incomplet, un système algorithmique d'optimisation, inséré dans un régime de coordination marchande, tend à amplifier la variable inscrite dans sa fonction objectif par exécution haute fréquence et faible friction~; lorsque cette variable diverge de l'objectif environnemental pertinent, l'optimisation transforme une distorsion latente en dommage réalisé.
+\end{quote}
+
+Le cas micro n'est donc pas extérieur à l'architecture conceptuelle. Il en constitue un test local. Il montre, à petite échelle, ce que la thèse soutient à l'échelle macro~: l'ICT n'est pas bonne ou mauvaise par essence~; elle amplifie les structures économiques et institutionnelles dans lesquelles elle est insérée.
+
+\section{Littérature empirique et mécanismes méso}
+
+La littérature empirique sur les impacts indirects du numérique opère à un niveau méso. Elle part d'applications observables~: télétravail, ride-hailing, mobilité comme service, e-commerce, pilotage énergétique, smart charging, optimisation logistique, automatisation industrielle. Elle mesure ensuite des fourchettes d'impact, identifie des conditions de déploiement et distingue les mécanismes favorables ou défavorables~: substitution, efficacité, optimisation, intégration système, rebond, demande induite, fragmentation, coordination ou désalignement des incitations.
+
+Ces travaux ne contredisent pas l'approche de cette thèse. Ils l'alimentent. Leur point de départ est l'application numérique~; le point de départ de la thèse est la fonction informationnelle et la structure économique. Les deux démarches se croisent au niveau des mécanismes médiateurs.
+
+Une application comme le télétravail relève d'une combinaison de transmission et de stockage, insérée dans un régime d'organisation du travail et de mobilité. Ses effets dépendent de la substitution entre déplacement et interaction à distance, mais aussi du rebond spatial, de la réorganisation résidentielle et de la consommation énergétique domestique. Une application comme le ride-hailing relève d'une plateforme de coordination, dont les effets dépendent du taux d'occupation, du deadheading, de la substitution modale et des incitations économiques. Une application comme le smart charging relève du couplage information-électricité, et ses effets dépendent de l'alignement entre optimisation privée, contraintes réseau et objectifs climatiques.
+
+La littérature par cas d'usage fournit donc les mécanismes observables et les bornes empiriques. La thèse fournit l'architecture qui explique pourquoi ces mécanismes varient~: fonction informationnelle, régime d'appropriation du capital, structure de coordination, extensibilité de la demande, matérialité déplacée, direction institutionnelle du changement technique.
+
+\section{Faits stylisés de sortie}
+
+Les faits stylisés ne remplacent pas les mécanismes. Ils en sont la forme condensée.
+
+\paragraph{Fait stylisé 1.}
+Les effets économiques de l'ICT varient selon la fonction informationnelle dominante. Transmission, stockage et calcul ne modifient pas les mêmes dimensions de l'économie.
+
+\paragraph{Fait stylisé 2.}
+La convergence numérique transforme l'information en demande électrique structurante. Le numérique n'est pas seulement un outil de coordination de l'énergie~; il devient un secteur et une infrastructure énergétiquement actifs.
+
+\paragraph{Fait stylisé 3.}
+La non-rivalité du contenu informationnel ne supprime pas la rivalité des infrastructures. Les supports, capacités, standards et services qui rendent l'information opératoire restent matériels, coûteux et appropriables.
+
+\paragraph{Fait stylisé 4.}
+Les infrastructures informationnelles tendent à concentrer les marchés lorsque le capital est propriétaire, intégré, standardisé ou réseau-compatible.
+
+\paragraph{Fait stylisé 5.}
+Les gains d'efficacité informationnelle coexistent souvent avec une expansion des usages lorsque la demande est extensible.
+
+\paragraph{Fait stylisé 6.}
+L'ICT transforme les formes de coordination autant qu'elle réduit les coûts de transaction.
+
+\paragraph{Fait stylisé 7.}
+La matérialité du numérique est souvent déplacée plutôt que supprimée.
+
+\paragraph{Fait stylisé 8.}
+Les trajectoires numériques sont orientées par les régimes économiques et institutionnels dans lesquels elles se déploient.
+
+\section{Des hypothèses aux régimes scénaristiques}
+
+Le passage vers les scénarios ne consiste pas à convertir chaque hypothèse en paramètre isolé. Il consiste à construire des régimes de couplage, c'est-à-dire des configurations cohérentes de mécanismes.
+
+Un régime de couplage associe une forme de demande informationnelle, un régime d'appropriation du capital, une direction de l'innovation, une forme de coordination, une visibilité plus ou moins forte du substrat matériel et un degré de gouvernance. Les scénarios ne sont donc pas des trajectoires arbitraires. Ils sont des combinaisons structurées de mécanismes.
+
+On peut distinguer quatre régimes idéaux-typiques.
+
+\paragraph{Expansion informationnelle non gouvernée.}
+Dans ce régime, la baisse du coût unitaire de transmission, de stockage et de calcul alimente une expansion continue des usages. Les effets d'efficacité existent localement, mais ils sont absorbés par l'augmentation des volumes, l'apparition de nouveaux usages et la concentration des infrastructures. Les mécanismes dominants sont l'efficacité expansive, la demande induite, le financement par anticipation, la concentration par économies d'échelle et la matérialité déplacée.
+
+\paragraph{Optimisation productiviste.}
+Dans ce régime, l'ICT est principalement mobilisée pour améliorer l'efficacité productive, réduire certaines frictions de coordination et accroître la productivité sectorielle. Les gains sont réels, mais partiellement compensés par les effets rebond, les changements de structure productive et l'expansion des usages induits. Les mécanismes dominants sont la coordination informationnelle, la substitution partielle entre information et stocks physiques, les gains d'efficacité locaux et la transformation de la frontière entre marché et organisation.
+
+\paragraph{Couplage orienté vers la transition.}
+Dans ce régime, les fonctions informationnelles sont orientées vers des usages explicitement contraints par des objectifs collectifs~: efficacité énergétique, pilotage des infrastructures, réduction des pertes, maintenance, sobriété, substitution matérielle réelle, interopérabilité, limitation des usages purement expansifs. Les mécanismes dominants sont la gouvernance de la direction technique, la limitation du rebond, la priorisation des usages, les standards ouverts et la visibilité du substrat matériel.
+
+\paragraph{Couplage contraint.}
+Dans ce régime, le développement de l'infrastructure informationnelle est limité par des contraintes physiques, économiques, sociales ou institutionnelles~: énergie, matériaux, financement, conflits d'usage, régulation, opposition locale, saturation des réseaux ou tensions géopolitiques. Les mécanismes dominants sont le ralentissement de l'accumulation infrastructurelle, l'arbitrage entre usages, la sélection plus stricte des investissements et la fragmentation possible des trajectoires numériques.
+
+\section{Synthèse}
+
+Les dix dimensions du chapitre ne sont pas dix hypothèses indépendantes. Elles sont les plans à partir desquels les mécanismes deviennent visibles. Les hypothèses structurantes émergent de leurs croisements~: différenciation fonctionnelle des effets informationnels, rôle du régime d'appropriation du capital, efficacité expansive sous demande extensible, transformation des formes de coordination, déplacement de la matérialité et direction endogène du changement technique.
+
+Mais ces hypothèses reposent elles-mêmes sur une hypothèse-mère et un fait structural organisateur. L'hypothèse-mère est que l'ICT doit être comprise comme une infrastructure fonctionnelle de transformation de l'information, et non comme un choc homogène. Le fait structural organisateur est que la convergence numérique couple structurellement information et électricité. C'est ce couplage qui donne sa portée énergétique et climatique à la théorie économique de l'information.
+
+La théorie produite ici n'est donc pas une théorie générale de l'économie numérique. Elle est une théorie mécanistique intermédiaire des rapports entre fonctions informationnelles, structures économiques et substrat énergétique. Elle permet d'organiser les observations historiques, de hiérarchiser les mécanismes, d'interpréter les cas empiriques micro et méso, et de construire des scénarios sans réduire la pensée à des paramètres isolés.
