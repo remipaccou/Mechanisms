@@ -1,0 +1,74 @@
+% =============================================================================
+% Thèse — Rémi Paccou — CIRED
+% Template: classicthesis (André Miede)
+% =============================================================================
+\RequirePackage{fix-cm}
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,
+                footinclude=true,cleardoublepage=empty,abstractoff,
+                BCOR=5mm,paper=a4,fontsize=11pt,
+                french,
+                ]{scrreprt}
+
+\input{classicthesis-config}
+
+\addbibresource{Bibliography.bib}
+
+%Switch These entiere vs Chapitres
+%\newcommand{\draftchapteronly}{}
+%\includeonly{Chapters/Chapter01}
+
+% =============================================================================
+% MODE BROUILLON : décommenter les 2 lignes suivantes pour compiler
+% uniquement le chapitre 1, sans pages blanches du front matter.
+% Recommenter pour compiler la thèse entière.
+% =============================================================================
+%\newcommand{\draftchapteronly}{}
+%\includeonly{Chapters/Chapter01}
+
+% =============================================================================
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{french}
+
+\ifdefined\draftchapteronly
+  % ─── Mode brouillon : pas de front matter, numérotation arabe directe ──────
+  \pagenumbering{arabic}
+  \pagestyle{scrheadings}
+\else
+  % ─── Mode thèse complète ───────────────────────────────────────────────────
+  \pagenumbering{roman}
+  \pagestyle{plain}
+  \include{FrontBackmatter/Titlepage}
+  \include{FrontBackmatter/Titleback}
+  \cleardoublepage\include{FrontBackmatter/Dedication}
+  \cleardoublepage\include{FrontBackmatter/Remerciements}
+  \cleardoublepage\include{FrontBackmatter/Resume}
+  \cleardoublepage\include{FrontBackmatter/Abstract}
+  \pagestyle{scrheadings}
+  \cleardoublepage\include{FrontBackmatter/Sommaire}
+  \cleardoublepage\pagenumbering{arabic}
+\fi
+
+% ─── Mainmatter ──────────────────────────────────────────────────────────────
+\include{Chapters/Introduction}
+\include{Chapters/Chapter01}
+\include{Chapters/Chapter02}
+\include{Chapters/Chapter03}
+\include{Chapters/Chapter04}
+\include{Chapters/Chapter05}
+\include{Chapters/Chapter06}
+\include{Chapters/Chapter07}
+\include{Chapters/Conclusion}
+
+% ─── Annexes ─────────────────────────────────────────────────────────────────
+\appendix
+\include{Chapters/AnnexeSD}
+\include{Chapters/AnnexeGenAI}
+\include{Chapters/AnnexeImaclim}
+
+% ─── Backmatter (biblio, index, listes, TDM en fin) ─────────
+\cleardoublepage\include{FrontBackmatter/Bibliography}
+\cleardoublepage\include{FrontBackmatter/Backmatter}
+
+\end{document}

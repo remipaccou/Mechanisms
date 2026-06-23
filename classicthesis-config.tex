@@ -1,0 +1,243 @@
+% ****************************************************************************************************
+% classicthesis-config.tex 
+% Thèse Rémi Paccou — CIRED — 2026
+% ****************************************************************************************************
+
+\PassOptionsToPackage{utf8}{inputenc}
+	\usepackage{inputenc}
+
+% ****************************************************************************************************
+% 1. Configure classicthesis
+% ****************************************************************************************************
+\PassOptionsToPackage{eulerchapternumbers,listings,%
+					 pdfspacing,%
+					 subfig,beramono,eulermath,parts,dottedtoc}{classicthesis}                                        
+
+% ****************************************************************************************************
+% 2. Personal data
+% ****************************************************************************************************
+\newcommand{\myTitle}{Information et calcul dans l'économie de l'énergie\xspace}
+\newcommand{\mySubtitle}{Histoire, dynamiques économiques et l'hypothèse d'un couplage structurel\xspace}
+\newcommand{\myDegree}{Docteur en Sciences Économiques\xspace}
+\newcommand{\myName}{Rémi Paccou\xspace}
+\newcommand{\myProf}{Directeur à compléter\xspace}
+\newcommand{\myOtherProf}{Co-directeur à compléter\xspace}
+\newcommand{\mySupervisor}{Superviseur à compléter\xspace}
+\newcommand{\myFaculty}{AgroParisTech\xspace}
+\newcommand{\myDepartment}{Sciences Économiques\xspace}
+\newcommand{\myUni}{Université Grenoble Alpes\xspace}
+\newcommand{\myLocation}{Grenoble\xspace}
+\newcommand{\myTime}{2026\xspace}
+\newcommand{\myVersion}{version de travail\xspace}
+
+\newcounter{dummy}
+\newlength{\abcd}
+\providecommand{\mLyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+\newcommand{\ie}{i.\,e.}
+\newcommand{\Ie}{I.\,e.}
+\newcommand{\eg}{e.\,g.}
+\newcommand{\Eg}{E.\,g.} 
+
+% ****************************************************************************************************
+% 3. Packages
+% ****************************************************************************************************
+\PassOptionsToPackage{french}{babel}
+	\usepackage{babel}                  
+
+\usepackage{csquotes}
+\PassOptionsToPackage{%
+    backend=biber,%
+	language=auto,%
+    style=authoryear-comp,%
+    bibstyle=authoryear,dashed=false,%
+    sorting=nyt,%
+    maxbibnames=10,%
+    natbib=true%
+}{biblatex}
+    \usepackage{biblatex}
+
+\PassOptionsToPackage{fleqn}{amsmath}
+    \usepackage{amsmath}
+
+\PassOptionsToPackage{T1}{fontenc}
+    \usepackage{fontenc}     
+\usepackage{textcomp}
+\usepackage{scrhack}
+\usepackage{xspace}
+\usepackage{mparhack}
+\usepackage{fixltx2e}
+\PassOptionsToPackage{printonlyused,smaller}{acronym} 
+    \usepackage{acronym}
+    \renewcommand*{\aclabelfont}[1]{\acsfont{#1}}
+
+% ****************************************************************************************************
+% 4. Floats
+% ****************************************************************************************************
+\usepackage{tabularx}
+    \setlength{\extrarowheight}{3pt}
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{subfig}  
+
+% ****************************************************************************************************
+% 5. Listings
+% ****************************************************************************************************
+\usepackage{listings} 
+\lstset{language=[LaTeX]Tex,%
+    morekeywords={PassOptionsToPackage,selectlanguage},
+    keywordstyle=\color{RoyalBlue},
+    basicstyle=\small\ttfamily,
+    commentstyle=\color{Green}\ttfamily,
+    stringstyle=\rmfamily,
+    numbers=none,
+    numberstyle=\scriptsize,
+    stepnumber=5,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    belowcaptionskip=.75\baselineskip
+} 
+
+% ****************************************************************************************************
+% 6. Hyperreferences
+% ****************************************************************************************************
+\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels}{hyperref}
+    \usepackage{hyperref}
+\pdfcompresslevel=9
+\pdfadjustspacing=1 
+\PassOptionsToPackage{pdftex}{graphicx}
+    \usepackage{graphicx} 
+
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen,%
+    pdftitle={\myTitle},%
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfsubject={\mySubtitle},%
+    pdfkeywords={ICT, information, calcul, énergie, économie, climat, datacenter, GPT},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}   
+
+\makeatletter
+\@ifpackageloaded{babel}%
+    {%
+       \addto\extrasfrench{%
+			\renewcommand*{\figureautorefname}{Figure}%
+			\renewcommand*{\tableautorefname}{Tableau}%
+			\renewcommand*{\partautorefname}{Partie}%
+			\renewcommand*{\chapterautorefname}{Chapitre}%
+			\renewcommand*{\sectionautorefname}{Section}%
+			\renewcommand*{\subsectionautorefname}{Section}%
+			\renewcommand*{\subsubsectionautorefname}{Section}%     
+                }%
+            \providecommand{\subfigureautorefname}{\figureautorefname}%             
+    }{\relax}
+\makeatother
+
+% ****************************************************************************************************
+% 7. Last calls
+% ****************************************************************************************************
+\listfiles
+\usepackage{classicthesis} 
+
+% --- Fix francisation des titres (classicthesis force "Contents" en anglais) ---
+\addto\captionsfrench{\renewcommand{\contentsname}{Sommaire}}
+\addto\captionsfrench{\renewcommand{\listfigurename}{Table des figures}}
+\addto\captionsfrench{\renewcommand{\listtablename}{Liste des tableaux}}
+
+% ****************************************************************************************************
+% 8. Marges style Pottier (zone de texte étroite, marges généreuses)
+% ****************************************************************************************************
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\areaset[current]{420pt}{770pt}
+\setlength{\marginparwidth}{7em}
+\setlength{\marginparsep}{1em}
+
+% ****************************************************************************************************
+% 9. Commandes de travail (RETIRER EN VERSION FINALE)
+% ****************************************************************************************************
+\usepackage{xcolor}
+\usepackage{svg}
+\usepackage{tikz}
+\definecolor{emergence}{rgb}{0.0, 0.45, 0.0}
+
+\newcommand{\emergence}[1]{%
+  \marginpar{\scriptsize\color{emergence}\textbf{É}}%
+  {\color{emergence}\textbf{[Émergence]} #1}}
+
+\newcommand{\questionch}[2]{%
+  \marginpar{\scriptsize\color{RoyalBlue}\textbf{$\rightarrow$#1}}%
+  {\color{RoyalBlue}\textit{[$\rightarrow$Ch.#1] #2}}}
+
+\newcommand{\wip}[1]{#1}
+% ****************************************************************************************************
+
+% ****************************************************************************************************
+% 10. Code couleur des écoles économiques
+% ----------------------------------------------------------------------------------------------------
+% Convention : marquer uniquement la sentence fondamentale (l'argument central)
+% de chaque école, pas tout le texte qui en relève. Une phrase, parfois deux.
+% Distinct des marqueurs de travail : teal (questions ouvertes), red (lacunes),
+% blue (décisions architecturales).
+% ****************************************************************************************************
+\definecolor{schoolNeo}{RGB}{30,60,140}        % NEO    bleu marine
+\definecolor{schoolInfo}{RGB}{110,60,160}      % INFO   violet
+\definecolor{schoolAus}{RGB}{220,120,30}       % AUS    orange
+\definecolor{schoolEvo}{RGB}{50,130,70}        % EVO    vert forêt
+\definecolor{schoolInst}{RGB}{125,80,40}       % INST   sépia
+\definecolor{schoolReg}{RGB}{140,30,55}        % REG    bordeaux
+\definecolor{schoolSts}{RGB}{160,130,50}       % STS    ocre
+\definecolor{schoolMarx}{RGB}{180,40,30}       % MARX   rouge cinabre
+
+\newcommand{\NEO}[1]{\textcolor{schoolNeo}{\textbf{#1}}}     % Néoclassique standard
+\newcommand{\INFO}[1]{\textcolor{schoolInfo}{\textbf{#1}}}    % Économie de l'information
+\newcommand{\AUS}[1]{\textcolor{schoolAus}{\textbf{#1}}}      % Autrichienne / Hayekienne
+\newcommand{\EVO}[1]{\textcolor{schoolEvo}{\textbf{#1}}}      % Évolutionniste-schumpétérienne
+\newcommand{\INST}[1]{\textcolor{schoolInst}{\textbf{#1}}}    % Néo-institutionnaliste
+\newcommand{\REG}[1]{\textcolor{schoolReg}{\textbf{#1}}}      % Post-keynésienne / Régulationniste
+\newcommand{\STS}[1]{\textcolor{schoolSts}{\textbf{#1}}}      % Sociotechnique / LTS
+\newcommand{\MARX}[1]{\textcolor{schoolMarx}{\textbf{#1}}}    % Marxiste (classique, contemporain, écologique, numérique)
+
+% Marqueurs de marge légers, signalent qu'une école est mobilisée dans la section/paragraphe
+% sans surcolorier le texte. Complémentaires aux macros inline ci-dessus.
+\newcommand{\markNEO}{\marginpar{\scriptsize\color{schoolNeo}\textbf{$\alpha$\,NEO}}}
+\newcommand{\markINFO}{\marginpar{\scriptsize\color{schoolInfo}\textbf{$\beta$\,INFO}}}
+\newcommand{\markAUS}{\marginpar{\scriptsize\color{schoolAus}\textbf{$\gamma$\,AUS}}}
+\newcommand{\markEVO}{\marginpar{\scriptsize\color{schoolEvo}\textbf{$\delta$\,EVO}}}
+\newcommand{\markINST}{\marginpar{\scriptsize\color{schoolInst}\textbf{$\varepsilon$\,INST}}}
+\newcommand{\markREG}{\marginpar{\scriptsize\color{schoolReg}\textbf{$\zeta$\,REG}}}
+\newcommand{\markSTS}{\marginpar{\scriptsize\color{schoolSts}\textbf{$\eta$\,STS}}}
+\newcommand{\markMARX}{\marginpar{\scriptsize\color{schoolMarx}\textbf{$\theta$\,MARX}}}
+
+% ****************************************************************************************************
+% 11. Marqueurs de la grille faits forts / contradictions productives (idée Rémi)
+% ----------------------------------------------------------------------------------------------------
+% Convention : marquer la qualification épistémique d'un mécanisme dans la marge.
+% \factfort       : convergence de plusieurs écoles épistémiquement indépendantes
+% \contradiction  : les écoles désaccordent, le test va trancher (chapitre 4)
+% \proposition    : mécanisme proposé sans triangulation, statut conjectural
+% ****************************************************************************************************
+\definecolor{factfortcol}{RGB}{20,90,40}
+\definecolor{contradcol}{RGB}{180,90,30}
+\definecolor{propocol}{RGB}{100,100,100}
+
+\newcommand{\factfort}[1]{%
+  \marginpar{\scriptsize\color{factfortcol}\textbf{$\checkmark\checkmark$}}%
+  {\color{factfortcol}\textbf{[Fait fort]} #1}}
+
+\newcommand{\contradiction}[1]{%
+  \marginpar{\scriptsize\color{contradcol}\textbf{$\rightleftarrows$}}%
+  {\color{contradcol}\textbf{[Contradiction productive]} #1}}
+
+\newcommand{\proposition}[1]{%
+  \marginpar{\scriptsize\color{propocol}\textbf{?}}%
+  {\color{propocol}\textbf{[Proposition]} #1}}
+% ****************************************************************************************************

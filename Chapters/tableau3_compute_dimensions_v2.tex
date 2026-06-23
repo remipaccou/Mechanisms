@@ -1,0 +1,98 @@
+% =============================================================================
+% TABLEAU 3 — La mécanisation du calcul au prisme des dix dimensions
+% Format comparable au Tableau 2 (télégraphe)
+% Distingue : CALCULATRICE MÉCANIQUE (§1.3) vs SYSTÈME MÉCANOGRAPHIQUE (§1.4)
+% V2 — 11 avril 2026 — corrigé avec sources manquantes de la V1
+% =============================================================================
+
+\begin{table}[p]
+\caption{La mécanisation du calcul au prisme des dix dimensions~: acquis, incertitudes et questions ouvertes}\label{tab:compute-dimensions-v2}
+\centering\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}cXcp{4.5cm}@{}}
+\toprule
+\textbf{Dim.} & \textbf{Acquis des cas §\,\ref{sec:calculating}--\ref{sec:mechanography}} & & \textbf{Question pour la suite} \\
+\midrule
+
+D1 &
+\emph{Calculatrice}~: traite des données internes, pas de support persistant (le résultat est recopié à la main). \emph{Mécanographie}~: la carte perforée est le premier support de données machine-lisible, réutilisable, triable. Mais la carte est un bout de carton~--- elle ne consomme pas d'énergie pour exister (contrairement au stockage magnétique ou électronique). & + &
+Le stockage numérique crée-t-il une rupture qualitative~--- un \textsc{store} qui consomme de l'énergie en continu~? \\[4pt]
+
+D2 &
+\emph{Calculatrice}~: marché concurrentiel, $\sim$100~firmes US en~1904, 13~fabricants dans les années~1920 (Cortada~1993). Barrières faibles, pas de rendements de réseau. \emph{Mécanographie}~: monopole IBM à~85,7\,\% des tabulatrices (DoJ, 1935). Mécanisme~: location + cartes exclusives + brevets systématiquement rachetés (Peirce~1922, Tauschek~1930). Licence à Powers~: 20\,\% US vs 5\,\% Allemagne (Heide~2009). Quatre cycles de clôture fondés sur un brevet-clé renouvelé (Mounier-Kuhn~2015). Différent du télégraphe~: pas de rendements de réseau mais verrouillage du consommable. & * &
+Le monopole par consommable est-il plus durable que le monopole par réseau~? Le premier survit à l'antitrust (1936), le second rarement. \\[4pt]
+
+D3 &
+\emph{Calculatrice}~: bien d'équipement vendu ($\sim$\$220 pièce, Burroughs~1895). \emph{Mécanographie}~: modèle location + flux de consommables. Trieuse \$10/mois, tabulatrice \$40/mois. Amortissement~: 20~mois (tabulatrice), 30~mois (trieuse). Cartes~: marge 60--80\,\%. Cartes = 33\,\% revenus IBM (1929), 39\,\% pendant la dépression (Cortada~1993). Le capital informationnel passe d'un stock (machine achetée) à un flux (location + consommables). & + &
+Le modèle location + consommable préfigure-t-il le SaaS~? La structure de revenus récurrents est-elle une constante de l'industrie informationnelle~? \\[4pt]
+
+D4 &
+La mécanisation ne remplace pas le travail~: elle le réorganise. Commis US~: 1--2\,\% (1870) $\rightarrow$ 10\,\% (1940) de la population active (Cortada~1993). Femmes dans l'emploi de bureau~: 2,4\,\% (1870) $\rightarrow$ 48,4\,\% (1920). Salaires réels des commis en baisse~: \$1\,920 $\rightarrow$ \$1\,385 (1899--1919, prix~1929), femmes payées 25--45\,\% de moins (Reinstaller \& Hölzl~2001). Corrélation K/L global et K/L bureau~: 0,921 (1889--1937). Comptabilité britannique~: pas de réduction du nombre de \emph{bookkeepers} (Wootton~2007). Au \emph{Nautical Almanac}~: calculateurs qualifiés (H, domicile) $\rightarrow$ opératrices (F, bureau, supervisées). Supervision = 20--30\,\% du travail (Daston~2018). \textbf{Inverse exact du télégraphe} (substitution directe K/L). Felt \& Tarrant~: 140~écoles de formation dans le monde, opératrices captives (Cortada~1993). & * &
+Le computing électronique reproduit-il ou inverse-t-il ce résultat~? L'IA générative remplace-t-elle enfin le travail cognitif~? \\[4pt]
+
+D5 &
+Coût par opération en baisse de $\sim$3\,\%/an, 1850--1945 (Nordhaus~2007). Prix des calculatrices stable $\sim$\$220 (Burroughs~1895--1900), puis économies d'échelle. Seuil de rentabilité client~: 1\,500~opérations/jour (Cortada~1993). Arithmomètre~: $\sim$500 machines cumulées avant~1865~; stock mondial~: 130\,000 (1910), 900\,000 (1920) (Nordhaus). \emph{Pas d'analyse d'élasticité de la demande au prix}. & + &
+La baisse du coût unitaire crée-t-elle un rebond de la demande de calcul (Jevons du compute)~? \\[4pt]
+
+D6 &
+\textbf{Aucun effet observable sur les marchés}. La calculatrice et la tabulatrice agissent \emph{à l'intérieur} des organisations, sur les coûts de fonctionnement~--- pas entre organisations via les prix. Pas de Steinwender du calcul. L'absence n'est pas un trou de la littérature~: c'est une différence structurelle entre \textsc{transmit} (traces sur les marchés) et \textsc{compute} (traces internes, endogènes). & -- &
+La fonction \textsc{compute} a-t-elle un rapport structurellement différent au marché que la fonction \textsc{transmit}~? \\[4pt]
+
+D7 &
+\og D'abord organiser, ensuite mécaniser\fg{} (Bolle~1929, PLM). Le coût de coordination \emph{créé} par la machine~: 20--30\,\% du travail total au \emph{Nautical Almanac} (Daston~2018). L'\emph{analytical intelligence}~--- concevoir la séquence homme-machine~--- est le goulot. Seize étapes par calcul sur machine Elliot-Fischer (Lahy \& Korngold~1931). Hollerith résiste à l'extension comptable jusqu'en~1917~; c'est Watson qui impose le virage (Heide~2009). Transition statistiques $\rightarrow$ comptabilité~: 25~ans, voies concurrentes Lake vs Peirce, Watson tranche (Heide~2009). Yates (1989)~: les systèmes de classement et de communication interne (\emph{filing systems}, circulaires, formulaires standardisés) précèdent et conditionnent l'adoption des machines de bureau. & * &
+L'informatisation augmente-t-elle les coûts de coordination avant de les réduire~? Le pattern Bolle se reproduit-il avec l'ERP~? \\[4pt]
+
+D8 &
+Hollerith incorpore TMC en~1896 (\$100\,000, 1\,000~actions à~\$100). CTR créée par Flint en~1911 (Hollerith reçoit \$2,3M~--- vingt fois une offre de trois ans plus tôt, Heide~2009). IBM revenus~: \$2,5M (1919) $\rightarrow$ \$20,3M (1931) $\rightarrow$ \$17,6M (1933) $\rightarrow$ \$45,3M (1940). Dividendes payés pendant toute la dépression. Remington Rand~: \$59,6M revenus en~1928 mais marge 10,1\,\% seulement (Cortada~1993). \textbf{Pas de pattern faillite/recapitalisation} comparable au câble transatlantique. Capital total industrie machines de bureau~: \$85M (1904) $\rightarrow$ \$455M (1929) $\rightarrow$ \$573M (1948) (Cortada~1993, Table~17.13). & ? &
+Le financement du calcul suit-il un cycle différent de celui des réseaux de communication~? \\[4pt]
+
+D9 &
+\textbf{Pas de matérialité extractive comparable au télégraphe.} La carte est du carton. Pas de gutta-percha, pas de cuivre, pas de poteaux. La seule matière première critique est le papier haute qualité des cartes~--- dont l'histoire n'a jamais été étudiée (Mounier-Kuhn~2015). & -- &
+La matérialité apparaît-elle avec l'électronique (silicium, terres rares, eau de refroidissement)~? \\[4pt]
+
+D10 &
+Hollerith refuse l'extension de son système à la comptabilité jusqu'en~1917~: sa vision reste la statistique. Watson, venu de NCR, impose le virage. Peirce est l'outsider radical (punched cards for bookkeeping, 1906/1913), Hollerith le conservateur~--- confirmation de la distinction Hughes radical/conservative innovations (Heide~2009). Powers avait une technologie supérieure en~1912--14 (tabulatrice à impression, pin reading) mais ne savait ni la fabriquer de manière fiable ni la vendre~; Watson l'emporta par le marketing et la manufacture (Cortada~1993, Heide~2009). Carte 80~colonnes (1928)~: perforations rectangulaires délibérément brevetables (Heide~2009). & + &
+Le premier entrant résiste-t-il systématiquement à l'élargissement de sa propre technologie~? \\[4pt]
+
+\midrule
+
+0-TER &
+£9 sur £607 (Daston~2018, \emph{Nautical Almanac}~1929)~: 1,5\,\% du coût total. \textbf{Doublement invisible}~: (a)~par les ordres de grandeur (comme le télégraphe)~; (b)~parce que le calcul ne pilote pas directement un système physique (le télégraphe coordonnait des trains qui consommaient du charbon~; la calculatrice produit des chiffres sur du papier). Pas de matérialité extractive. L'industrie entière des machines de bureau = 0,2\,\% du PNB US (1929)~; IBM seul = 0,03\,\%. VdK condense 130~ans en un paragraphe~: trop petit pour le cadre GPT. & + &
+À quel moment le ratio change-t-il~? Le passage au substrat électronique et l'explosion des volumes rendent-ils le couplage visible~? \\
+
+\bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\end{table}
+
+
+% =============================================================================
+% SOURCES MOBILISÉES — INVENTAIRE COMPLET
+% =============================================================================
+%
+% DANS LE TEXTE ET LE TABLEAU :
+%  1.  Cortada (1993) ch. 1-3, 7, 11, 13, 17        [lu en entier]
+%  2.  Nordhaus (2007)                                [lu en entier]
+%  3.  Schaffer (1994)                                [lu en entier]
+%  4.  Daston (2018)                                  [lu en entier]
+%  5.  Reinstaller & Hölzl (2001) WP #15              [lu en entier]
+%  6.  Wootton (2007)                                 [lu en entier]
+%  7.  Heide (2009) ch. 4                             [lu en entier]
+%  8.  Mounier-Kuhn (2015)                            [lu en entier]
+%  9.  Steinwender (2018) — par contraste             [lu §1.2]
+% 10.  Chandler (1977) — par contraste                [lu §1.2]
+% 11.  Beniger (1986) — par contraste                 [lu §1.2]
+% 12.  VdK (2022) Information Engine                  [lu en entier]
+% 13.  Bolle (1929) — via zoom existant               [cité, pas relu cette session]
+% 14.  Lahy & Korngold (1931) — via zoom existant     [cité, pas relu cette session]
+% 15.  Yates (1989) — ajoutée D7 (filing systems)    [pas lue — à lire]
+%
+% LUES MAIS PAS (ENCORE) DANS LE TEXTE V1 :
+% 16.  Yates (1993) — article                        [lu session préc.]
+% 17.  Broadberry & Ghosal (2003)                    [lu ~50%]
+%
+% PAS LUES (trous identifiés) :
+% 18.  Austrian (1982) — biographie Hollerith
+% 19.  Campbell-Kelly (1992) — Prudential             [scan illisible]
+% 20.  Truesdell (1965) — Census
+% 21.  Croarken (2009) — human computers

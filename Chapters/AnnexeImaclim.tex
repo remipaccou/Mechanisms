@@ -1,0 +1,131 @@
+% =============================================================================
+% ANNEXE — Bilan des versions IMACLIM : représentation du travail
+% =============================================================================
+% À inclure via \input{Chapters/AnnexeImaclim} dans ClassicThesis.tex
+% STATUT : brouillon v1, 4 mai 2026
+% SOURCE : lecture complète du dossier 4. Modeling/Imaclim/MD/ (31 fichiers)
+% =============================================================================
+
+\chapter{Bilan des versions IMACLIM~: représentation du travail}\label{ch:annexe-imaclim}
+
+Cette annexe recense les choix architecturaux relatifs à la représentation du travail dans les différentes versions du modèle IMACLIM documentées dans la littérature du CIRED. Elle a été construite à partir de la lecture systématique de la documentation officielle \parencite{bibas_imaclim_2014}, des thèses de Crassous, Guivarch, Le Treut, Lefèvre, Sassi et Cassen, des articles publiés par Waisman et al., Soummane et Ghersi, Combet et al., et de la cartographie du code source IMACLIM-R World v2.0.
+
+\section{Architecture générale}
+
+Le tableau~\ref{tab:imaclim-archi} compare les cinq versions documentées sur leurs caractéristiques générales.
+
+\begin{table}[htbp]
+\centering
+\caption{Architecture générale des versions IMACLIM}\label{tab:imaclim-archi}
+\small
+\begin{tabular}{p{2.8cm}p{2.2cm}p{2.2cm}p{2.2cm}p{2.2cm}p{2.2cm}}
+\toprule
+ & \textbf{R~World} & \textbf{S~France} & \textbf{Country} & \textbf{SAU} & \textbf{R~+~CTE} \\
+\midrule
+\textbf{Source} & Bibas et al. 2014, Guivarch 2010, Waisman et al. 2012 & Ghersi 2009, Le Treut 2017 & Lefèvre (thèse) & Soummane \& Ghersi 2020 & Sassi 2008 \\
+\addlinespace
+\textbf{Type} & Récursif dynamique & Statique comparatif & Récursif dynamique & Récursif dynamique & Récursif dynamique \\
+\addlinespace
+\textbf{Régions} & 12 régions mondiales & France & Brésil + RdM & Arabie Saoudite + RdM & 12 régions mondiales \\
+\addlinespace
+\textbf{Secteurs} & 12 & 3 à 24 (variable) & 12+ & 12 & 12 \\
+\addlinespace
+\textbf{Secteur ICT} & Non & Non & Non & Non & Non \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Structure de production et inputs}
+
+\begin{table}[htbp]
+\centering
+\caption{Structure de production}\label{tab:imaclim-production}
+\small
+\begin{tabular}{p{2.8cm}p{2.2cm}p{2.2cm}p{2.2cm}p{2.2cm}p{2.2cm}}
+\toprule
+ & \textbf{R~World} & \textbf{S~France} & \textbf{Country} & \textbf{SAU} & \textbf{R~+~CTE} \\
+\midrule
+\textbf{CI hors énergie} & Leontief & Leontief & Leontief & Leontief & Leontief \\
+\addlinespace
+\textbf{Agrégat KLE} & Leontief (statique) & CES(KL, E) & CES(KL, E) & CES(K,L) + KEM & CES(K,L,E) \\
+\addlinespace
+\textbf{Mise à jour CI} & Putty-clay à vintages, logit sur LCC & --- (statique) & Putty-clay & Putty-clay & Putty-clay + R\&D dirigée \\
+\addlinespace
+\textbf{Contrainte capacité} & $\Omega$ rendements décroissants sur le travail & Non & Oui & Oui & Oui \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Les cinq canaux du travail}
+
+Le travail entre dans IMACLIM par cinq canaux interconnectés, dont la spécification varie selon les versions.
+
+\subsection{Coefficient unitaire de travail $l_{k,i}$}
+
+Dans toutes les versions, le coefficient unitaire de travail $l_{k,i}$ (heures travaillées par unité produite, pour chaque secteur~$i$ dans chaque région~$k$) est fixe au sein de chaque équilibre statique. Les versions diffèrent sur la façon dont il évolue entre périodes~:
+
+\begin{itemize}
+\item \textbf{IMACLIM-R World}~: $l_{k,i}^{t+1} = l_{k,i}^{t} \cdot (1 - \mathit{TC\_l}_k)$, où $\mathit{TC\_l}_k$ est un taux de croissance de la productivité exogène, \emph{uniforme entre secteurs} au sein d'une même région. Le leader (États-Unis) a un taux allant de 2\,\% à court terme à 1,65\,\% à long terme. Les autres régions convergent vers le leader selon un mécanisme de rattrapage à la \textcite{barro_technological_1997}.
+\item \textbf{IMACLIM-S France} (Le Treut)~: le coefficient peut être modifié par un multiplicateur $\varphi_{L_i}$ exogène, de type \emph{factor-augmenting}, \emph{par secteur}. C'est la seule version qui permet une différenciation sectorielle de la croissance de productivité.
+\item \textbf{IMACLIM-R + CTE} (Sassi)~: la productivité du travail est \emph{partiellement endogène}. L'effort de R\&D se partage entre deux stocks de connaissance~: l'un améliore la productivité du travail dans la CES$(K,L,E)$, l'autre la productivité du facteur énergie. C'est du changement technique dirigé.
+\end{itemize}
+
+\subsection{Substitution capital/travail}
+
+\begin{table}[htbp]
+\centering
+\caption{Élasticité de substitution capital/travail $\sigma_{KL}$}\label{tab:imaclim-sigma}
+\small
+\begin{tabular}{p{3.5cm}p{2cm}p{6cm}}
+\toprule
+\textbf{Version} & $\sigma_{KL}$ & \textbf{Source et notes} \\
+\midrule
+R~World (statique) & 0 (Leontief) & Coefficients fixes dans l'équilibre annuel. Substitution implicite entre périodes via le putty-clay (nouvelles capacités). \\
+\addlinespace
+S~France / Country & 0,42 (composite) ; 0,45 (énergie) & Lefèvre donne les valeurs. Le Treut confirme la supériorité empirique de l'emboîtement KL-E sur les alternatives KE-L et LE-K. \\
+\addlinespace
+SAU & Variable par secteur & Okagawa \& Ban (2008)~: pétrole 0,139~; électricité 0,46~; agriculture 0,023~; manufacture 0,046~; transport 0,31. \\
+\addlinespace
+R~+ CTE & Non précisé & CES$(K,L,E)$ à trois intrants. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La distinction correcte n'est donc pas «~Leontief vs CES~» entre versions d'IMACLIM. Elle est entre deux moments du modèle~: dans l'équilibre statique d'IMACLIM-R World, les coefficients sont fixes (Leontief)~; dans les versions statiques (IMACLIM-S, Country), les producteurs optimisent sous CES. Et dans IMACLIM-R World, entre deux périodes, le putty-clay modifie les coefficients du nouveau capital, ce qui permet une substitution $K/L$ lente via le renouvellement du stock.
+
+\subsection{Wage curve}
+
+Toutes les versions utilisent une courbe salaire-chômage d'élasticité environ $-0,1$, calibrée sur \textcite{blanchflower_introduction_1995}.
+
+\begin{itemize}
+\item \textbf{Forme dans le code} (IMACLIM-R World)~: $w = p_{\mathrm{ind}} \cdot w_{\mathrm{ref}} \cdot (a_w + b_w \cdot \tanh(c_w \cdot Z))$, où $Z$ est le taux de chômage et $a_w$ évolue en parallèle à la productivité ($a_w \leftarrow a_w / (1 - \mathit{TC\_l})$), ce qui indexe les salaires réels sur la productivité.
+\item \textbf{Le Treut (chapitre~5)}~: wage curves sectorielles différenciées par degré d'exposition au commerce extérieur. Les secteurs exposés ont un pouvoir de négociation salariale plus faible. C'est la seule version qui différencie le marché du travail entre secteurs.
+\item \textbf{Combet et al.\ (2025)}~: le salaire est corrélé aux prix étrangers (compétitivité), pas au CPI domestique. Décomposition en 10 groupes de revenu pour les effets distributifs.
+\item \textbf{Crassous} note que la wage curve «~peut être interprétée de multiples façons, notamment en considérant le pouvoir de négociation salariale et la rareté de l'offre de travail~» --- ce ne sont pas les mêmes mécanismes.
+\end{itemize}
+
+\subsection{Chômage endogène}
+
+Dans toutes les versions, le chômage $z_k$ est la variable d'ajustement~:
+\begin{equation}
+z_k = 1 - \frac{\sum_i l_{k,i} \cdot Q_{k,i}}{L_k}
+\end{equation}
+où $L_k$ est la force de travail totale (exogène, projection démographique ONU) et $Q_{k,i}$ la production sectorielle. Le chômage rétroagit sur les salaires via la wage curve, les salaires entrent dans les coûts de production, les coûts déterminent les prix, les prix déterminent la demande, la demande détermine $Q$ --- qui reboucle sur l'emploi.
+
+\subsection{Réallocation intersectorielle}
+
+La productivité agrégée de l'économie est endogène via la réallocation~: quand la demande finale se déplace entre secteurs à productivités différentes, la productivité moyenne change même si la productivité de chaque secteur reste fixe. C'est le \emph{seul} canal par lequel la productivité agrégée est endogène dans IMACLIM-R World.
+
+\section{Résultat clé~: sensibilité à la wage curve}
+
+\textcite{guivarch_reducing_2011} montrent que l'élasticité de la wage curve est un déterminant de premier ordre des coûts des politiques climatiques. Avec des marchés du travail flexibles (élasticité élevée), les pertes de PIB pour une stabilisation à 550~ppm sont inférieures à 2\,\% en 2030. Avec des marchés rigides (élasticité faible), les coûts augmentent significativement. Ce résultat implique que les hypothèses sur le marché du travail ne sont pas un paramètre secondaire du modèle~: elles pèsent autant que les hypothèses technologiques sur les résultats.
+
+\section{Ce qu'aucune version ne fait}
+
+\begin{itemize}
+\item Aucune version n'a de secteur ICT explicite parmi les secteurs productifs.
+\item Aucune version ne différencie le travail par qualification (\emph{skilled/unskilled}, \emph{routine/non-routine}).
+\item Aucune version ne modélise l'automatisation des tâches au sens d'Acemoglu-Restrepo (déplacement vs réinstauration).
+\item Aucune version ne lie la productivité du travail à l'investissement ICT de façon endogène (sauf Sassi 2008 pour la R\&D générique, pas spécifiquement ICT).
+\item Aucune version ne capture le couplage entre demande d'électricité du \emph{compute} et marché du travail.
+\end{itemize}

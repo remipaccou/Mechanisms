@@ -1,0 +1,331 @@
+%*******************************************************
+% Chapter 3
+%*******************************************************
+\chapter{Le substrat biophysique~: énergie, climat et infrastructure informationnelle}\label{ch:energy}
+
+Les deux chapitres précédents ont traversé l'histoire des techniques de l'information et en ont tiré des structures économiques. Le chapitre~1 a montré, par induction, que la fonction informationnelle (transmettre, stocker, calculer) est continue à travers les changements de substrat technique, et que son rapport à l'énergie, longtemps invisible par les ordres de grandeur (ratio 1:2\,000 dans le cas ferroviaire), s'est transformé au fil des phases. Le chapitre~2 a systématisé ces observations en dix dimensions économiques, identifié des mécanismes structurels et formulé des faits stylisés. Mais ni l'un ni l'autre n'ont traité frontalement la question qui les traverse~: quelle est la trajectoire du couplage entre le système informationnel et le système énergétique~? Ce couplage se renforce-t-il ou s'atténue-t-il avec le temps~? La numérisation est-elle, dans le bilan net, un facteur de décarbonation ou un facteur d'accroissement de la demande d'énergie~? Et la réponse dépend-elle de la fonction informationnelle considérée~?
+
+Le présent chapitre adopte le point de vue du substrat biophysique. Il prend pour acquis les structures et les mécanismes établis dans les chapitres précédents, et les confronte aux données physiques~: consommation d'énergie, émissions, flux de matière, contraintes d'infrastructure. Le changement de perspective n'est pas un changement de sujet~: c'est le même objet~--- le couplage ICT-énergie~--- vu depuis les grandeurs que l'économie seule ne mesure pas.
+
+L'enjeu n'est pas de savoir si la numérisation est bonne ou mauvaise pour le climat~; mais de savoir si l'on est capable de détecter les conditions sous lesquelles le couplage entre système informationnel et système énergétique intensifie la consommation d'énergie, et d'en déduire les conditions sous lesquelles, au contraire, il contribue à la décarbonation. Le chapitre procède en sept sections qui construisent progressivement l'argument.
+
+Les deux premières sections posent le problème et son état dans la littérature. La première dresse une photographie observationnelle de trois systèmes en interaction~: le système climatique, le système énergétique et l'infrastructure numérique. La seconde examine comment la littérature académique représente cette interaction et identifie trois absences constitutives~: aucun modèle intégré n'endogénéise la numérisation, aucun test formel du paradoxe de Jevons pour le calcul n'est publié, et la trajectoire alternative la mieux articulée (la suffisance numérique) n'a jamais été quantifiée dans un modèle.
+
+Les trois sections suivantes construisent l'argument analytique. La troisième reprend le matériau des chapitres~1 et~2 sous l'angle de l'énergie et montre que le rapport ICT-énergie a traversé des configurations historiques distinctes. La quatrième examine les données contemporaines, stratifiées par couche fonctionnelle, et identifie les mécanismes spécifiques par lesquels le compute AI se distingue des couches réseau et stockage. La cinquième répond à l'objection que l'ICT ne serait qu'une industrie électro-intensive ordinaire~: trois différences structurelles (bidirectionnalité, incommensurabilité temporelle, irréversibilité dans l'incertitude) en font un objet analytique spécifique.
+
+Les deux dernières sections formulent la thèse et préparent le dispositif expérimental. La sixième argumente que le déploiement de l'ICT, à travers les mécanismes économiques qu'il active (et qui l'activent en retour), tend sous le régime actuel vers l'intensification~; des trajectoires alternatives existent mais les conditions économiques de leur émergence systémique ne sont pas réunies. La septième identifie ces trajectoires dans la littérature, explique pourquoi elles restent des niches, et les traduit en scénarios testables dans le chapitre~\ref{ch:imaclim}.
+
+Ce chapitre ne traite pas de la question normative (faut-il freiner ou accélérer la numérisation~?) ni de la question politique (comment réguler~?). Il construit un faisceau d'indices convergents qui motivent une hypothèse conditionnelle, et fournit au chapitre~\ref{ch:imaclim} les grandeurs, les relations et les hypothèses structurantes dont la modélisation a besoin.
+
+
+% =============================================================================
+\clearpage
+\section{Trois systèmes en interaction~: climat, énergie, numérique}\label{sec:photographie}
+% =============================================================================
+
+% Brouillon 1, 28 avril 2026
+% Fonction : état des lieux observationnel. Trois plans successifs.
+% Résultat intermédiaire : trois systèmes en interaction simultanée.
+
+Le présent chapitre s'ouvre par un état des lieux. Avant de mobiliser les résultats des chapitres précédents, avant de formuler une hypothèse, il faut poser ce que l'on observe~: l'état des connaissances sur le climat, l'état du système énergétique mondial, et l'irruption récente de l'infrastructure numérique comme composante significative de ce système. Les trois plans qui suivent ne contiennent ni jugement normatif ni recommandation~; ils rassemblent des faits établis, des ordres de grandeur et des tendances documentées, en s'appuyant sur les sources les plus robustes disponibles.
+
+
+\subsection{L'état des connaissances climatiques}\label{subsec:climat}
+
+Le sixième rapport d'évaluation du Groupe d'experts intergouvernemental sur l'évolution du climat, publié entre 2021 et 2023, constitue l'état de l'art le plus complet sur la physique du changement climatique, ses conséquences observées et les trajectoires d'atténuation envisageables \parencite{ipcc_ar6_wg1_2021, ipcc_ar6_wg2_2022, ipcc_ar6_wg3_2022}. Les résultats du premier groupe de travail, consacré aux bases physiques, ne sont pas des projections~; ce sont des constats appuyés sur l'observation instrumentale, la paléoclimatologie et la modélisation du système terrestre. La température moyenne de surface a augmenté d'environ 1,1~°C par rapport à la période préindustrielle. L'attribution de ce réchauffement aux émissions anthropiques de gaz à effet de serre est qualifiée de «~sans équivoque~» par le rapport, un terme qui, dans le vocabulaire calibré du GIEC, désigne le degré de certitude le plus élevé.
+
+Les conséquences de ce réchauffement sont déjà observables~: recul des glaciers continentaux, élévation du niveau de la mer d'environ 20~centimètres depuis le début du vingtième siècle, augmentation de la fréquence et de l'intensité des événements climatiques extrêmes dans plusieurs régions du monde \parencite{ipcc_ar6_wg2_2022}. Le deuxième groupe de travail, consacré aux impacts et à l'adaptation, documente des seuils au-delà desquels certains dommages deviennent irréversibles à l'échelle des civilisations~: disparition de récifs coralliens, perturbation des moussons, dégel du pergélisol libérant des quantités de méthane difficiles à estimer avec précision.
+
+Le troisième groupe de travail, consacré à l'atténuation, traduit ces constats physiques en contrainte temporelle. Pour maintenir le réchauffement en dessous de 1,5~°C avec une probabilité de 50~\%, le budget carbone résiduel est d'environ 500~gigatonnes de CO\textsubscript{2} à compter de 2020, soit une douzaine d'années d'émissions au rythme actuel \parencite{ipcc_ar6_wg3_2022}. Pour un objectif de 2~°C, le budget s'élève à environ 1\,150~gigatonnes, soit un peu moins de trente ans. Ces chiffres ne sont pas des cibles politiques négociables~; ce sont des grandeurs physiques qui lient le stock cumulé d'émissions à la réponse thermique du système terrestre. La contrainte qu'ils posent est celle d'un flux~: le rythme auquel les émissions doivent décroître pour rester dans l'enveloppe du budget. Les trajectoires compatibles avec 1,5~°C exigent une réduction des émissions mondiales nettes de CO\textsubscript{2} d'environ 45~\% d'ici 2030 par rapport à 2010, et l'atteinte de la neutralité carbone aux alentours de 2050.
+
+\textcite{crutzen_geology_2002} a proposé le terme d'\emph{Anthropocène} pour désigner l'époque géologique dans laquelle l'activité humaine est devenue une force de transformation du système terrestre comparable aux forces géophysiques. Que l'on accepte ou non la formalisation stratigraphique de cette proposition, le diagnostic qu'elle porte est difficile à contester~: les flux de matière et d'énergie mobilisés par les sociétés industrielles ont modifié la composition de l'atmosphère, le cycle de l'azote, la couverture des sols et la biodiversité à des échelles qui n'ont pas de précédent dans l'Holocène. Le changement climatique est la manifestation la plus mesurable de cette transformation, mais il n'en est pas la seule~: l'érosion de la biodiversité, l'acidification des océans et la perturbation du cycle du phosphore sont des processus parallèles, documentés par la même communauté scientifique avec des degrés de certitude comparables \parencite{rockstrom_safe_2009, steffen_planetary_2015}.
+
+Le point pertinent pour la suite de ce chapitre n'est pas la gravité du diagnostic~; c'est sa traduction en contrainte sur le système énergétique. La quasi-totalité des émissions de CO\textsubscript{2} d'origine fossile provient de la combustion de charbon, de pétrole et de gaz naturel pour produire de l'énergie. Décarboner l'économie signifie transformer le système énergétique. C'est vers ce système que le regard se tourne maintenant.
+
+
+\subsection{L'état du système énergétique}\label{subsec:energie}
+
+Les transitions énergétiques sont des phénomènes lents. \textcite{smil_energy_2017}, dans la synthèse la plus documentée de l'histoire longue de l'énergie, montre que le passage d'une source primaire dominante à une autre s'étend sur des décennies, souvent un demi-siècle ou davantage~: le charbon a mis près de soixante-dix ans à dépasser le bois comme source primaire en Grande-Bretagne, le pétrole a mis un demi-siècle à dépasser le charbon à l'échelle mondiale, et le gaz naturel, malgré une croissance soutenue depuis les années~1950, n'a toujours pas dépassé le pétrole \parencite{smil_energy_2010}. Ces transitions sont cumulatives, non substitutives~: les anciens combustibles ne disparaissent pas, ils perdent des parts relatives dans un mix énergétique en expansion. En 2023, la consommation mondiale de charbon était supérieure en volume à celle de 1990 \parencite{iea_weo_2024}.
+
+Cette lenteur structurelle entre en tension avec l'urgence que le budget carbone impose. \textcite{fouquet_past_2012} montrent, à partir de l'analyse historique des transitions énergétiques depuis le dix-huitième siècle, que la vitesse de substitution est conditionnée par la disponibilité d'une infrastructure physique alternative, par la rentabilité relative des nouvelles sources et par les institutions qui encadrent l'accès au réseau. Ces trois conditions ne sont pas indépendantes~: la rentabilité des renouvelables dépend de l'infrastructure de réseau, qui dépend elle-même des règles d'accès et de tarification. La transition n'est pas un processus purement technique~; c'est un processus techno-institutionnel dont la vitesse est celle du maillon le plus lent.
+
+Dans ce processus, l'électricité occupe une place singulière. La part de l'électricité dans l'énergie finale mondiale est d'environ 20~\% en 2023. Les scénarios de décarbonation qui atteignent la neutralité carbone à l'horizon 2050 supposent que cette part atteigne 40 à 50~\%, selon les hypothèses retenues sur l'hydrogène et les carburants de synthèse \parencite{iea_nze_2023}. L'électrification est le mécanisme central par lequel la décarbonation des usages finaux est techniquement réalisable~: remplacer les chaudières à gaz par des pompes à chaleur, les moteurs thermiques par des moteurs électriques, une partie des procédés industriels par des procédés électriques. À condition que l'électricité elle-même soit produite sans émissions, ce qui renvoie à la transformation du mix de production.
+
+\textcite{grubler_technology_1998} a documenté la complémentarité structurelle entre les systèmes de transport, les systèmes de communication et les systèmes énergétiques dans la longue durée. Les canaux et l'alimentation animale ont saturé ensemble aux alentours de 1870~; le rail et le charbon ont saturé ensemble vers 1930~; les routes et le pétrole ont saturé ensemble vers 1970. Chaque transition énergétique est portée par une infrastructure de transport et une infrastructure de communication qui co-évoluent avec elle. La question que Grübler ne pose pas est celle de la prochaine co-saturation~: si l'électricité renouvelable est le vecteur de la quatrième transition, quelle est l'infrastructure informationnelle qui l'accompagne, et quel en est le coût énergétique propre~?
+
+Le système électrique mondial se trouve dans une configuration inédite. D'un côté, les coûts de production de l'électricité solaire et éolienne ont baissé de plus de 80~\% en dix ans, rendant les renouvelables compétitives avec les centrales à combustibles fossiles dans la majorité des géographies \parencite{irena_costs_2023}. La capacité solaire installée a été multipliée par dix entre 2013 et 2023. De l'autre, l'intégration de sources variables dans un réseau conçu pour des centrales pilotables pose des problèmes de flexibilité, de stockage et de gestion de la courbe de charge qui sont loin d'être résolus à l'échelle requise. C'est dans cette configuration~--- un système en transformation rapide côté production, en tension côté réseau~--- que survient une nouvelle source de demande.
+
+
+\subsection{L'irruption numérique dans le système énergétique}\label{subsec:irruption}
+
+La consommation électrique des centres de données mondiaux est estimée entre 240 et 340~TWh en 2022, soit entre 1 et 1,3~\% de la demande électrique mondiale \parencite{iea_electricity_2024}. Cet ordre de grandeur est comparable à la consommation électrique d'un pays comme la France. Les estimations varient selon les sources et les périmètres retenus~: \textcite{masanet_recalibrating_2020} argumentent dans \emph{Science} que la consommation des centres de données n'a augmenté que de 6~\% entre 2010 et 2018 malgré une multiplication par six du trafic de données, grâce aux gains d'efficacité et à la migration vers les centres hyperscale. \textcite{freitag_real_2021}, dans \emph{Patterns}, contestent cette lecture en soulignant trois sources de sous-estimation~: les effets rebond insuffisamment comptabilisés, les périmètres qui excluent les réseaux et les terminaux, et le manque de données publiques sur les installations des grands opérateurs. L'écart entre les deux lectures est d'un facteur deux environ sur la consommation globale. Cet écart n'est pas anecdotique~; il est lui-même un indicateur de la difficulté de mesure qui caractérise le secteur.
+
+Ce qui fait l'objet d'un consensus plus large, en revanche, est la trajectoire récente. L'Agence internationale de l'énergie projette que la consommation électrique des centres de données pourrait doubler entre 2022 et 2026, passant à plus de 1\,000~TWh en projection haute \parencite{iea_electricity_2024}. Cette accélération est tirée par le déploiement de l'intelligence artificielle générative, dont les besoins en calcul sont d'un ordre de grandeur supérieur à ceux des services numériques classiques. La puissance électrique d'un rack de serveurs équipé de GPU pour l'entraînement de modèles de langage atteint 130~kW avec la génération Blackwell de Nvidia en 2024, contre 13~kW pour un rack conventionnel quatre ans plus tôt. La génération suivante, annoncée pour 2026, franchit le seuil du mégawatt par rack. Ces chiffres ne sont pas des projections~; ce sont des spécifications techniques de produits commercialisés.
+
+L'accélération de la demande se traduit par des faits institutionnels inédits. Les opérateurs de centres de données signent des contrats d'achat d'électricité (PPA) d'une durée de quinze à vingt ans avec des producteurs nucléaires~: Microsoft avec Constellation Energy pour la réouverture de la centrale de Three Mile Island, Amazon avec Talen Energy pour la centrale de Susquehanna, Google avec Kairos Power pour des réacteurs modulaires de prochaine génération. Les investissements en capital des quatre principaux opérateurs (Amazon, Microsoft, Google, Meta) dans les infrastructures de centres de données ont dépassé 200~milliards de dollars en 2024, un montant supérieur à l'investissement annuel du secteur électrique américain dans son ensemble \parencite{iea_weo_2024}. Les files d'attente pour l'interconnexion au réseau électrique aux États-Unis atteignent cinq à dix ans dans les régions les plus sollicitées \parencite{rand_queued_2024}. Plusieurs juridictions ont imposé des moratoires sur la construction de nouveaux centres de données~: l'Irlande en 2022, la municipalité d'Amsterdam en 2019, le comté de Prince William en Virginie en 2024.
+
+Ces faits sont datés, vérifiables, et n'existaient pas dix ans plus tôt. Ils signalent une transformation qualitative du rapport entre l'infrastructure numérique et le système électrique~: l'ICT n'est plus un consommateur marginal dont la croissance est absorbée sans tension par le réseau, mais un acteur dont les décisions d'investissement modifient les conditions de planification du système électrique dans son ensemble. Le point n'est pas que cette transformation soit bonne ou mauvaise~; c'est qu'elle se produit au moment précis où le système électrique est engagé dans sa propre transformation sous contrainte de décarbonation.
+
+Trois systèmes sont donc en interaction simultanée~: le système climatique, dont la physique impose une contrainte de flux sur les émissions~; le système énergétique, qui doit se transformer à une vitesse sans précédent historique pour respecter cette contrainte~; et le système numérique, qui ajoute une source de demande nouvelle dont la trajectoire est incertaine mais dont les premiers signaux sont ceux d'une croissance rapide et concentrée. La question qui structure la suite du chapitre est celle de la nature de cette interaction~: s'agit-il d'une coïncidence temporelle entre trois dynamiques indépendantes, ou d'un couplage structurel dont les propriétés méritent d'être analysées~?
+
+
+% =============================================================================
+\clearpage
+\section{Comment la littérature représente le problème}\label{sec:litterature}
+% =============================================================================
+
+% Brouillon 1, 28 avril 2026
+% Fonction : double état de l'art (cadres conceptuels + modèles). Conclut par le triple vide.
+% Résultat intermédiaire : la littérature classe des effets mais ne modélise pas le couplage.
+
+La section précédente a posé trois systèmes en interaction. La question est maintenant de savoir comment la littérature académique comprend et représente cette interaction. Deux corps de travaux sont pertinents~: d'une part, les cadres conceptuels qui classent les effets environnementaux de la numérisation~; d'autre part, les modèles intégrés d'évaluation (IAMs) qui tentent de quantifier ces effets dans des trajectoires d'émissions. Ni les uns ni les autres, on le verra, ne captent le mécanisme structurel que le reste du chapitre cherche à identifier.
+
+
+\subsection{Les cadres conceptuels~: classer les effets}\label{subsec:cadres}
+
+Le cadre de référence pour analyser les effets environnementaux de l'ICT est le modèle LES (Life-cycle, Enabling, Structural) proposé par \textcite{hilty_ict_2015}. Ce modèle distingue trois niveaux d'impact~: les impacts de cycle de vie des équipements numériques eux-mêmes (premier niveau), les impacts «~facilitants~» par lesquels l'ICT modifie les processus de production et de consommation (deuxième niveau), et les impacts structurels qui résultent de l'agrégation de ces effets au niveau macroéconomique (troisième niveau). Au deuxième niveau, trois mécanismes sont identifiés~: l'optimisation de processus, la substitution de média et l'externalisation du contrôle. Cette architecture a le mérite de la clarté~: elle sépare ce que l'ICT consomme de ce qu'elle permet d'économiser, et elle distingue les effets micro des effets macro.
+
+Deux extensions méritent d'être signalées. \textcite{townsend_digital_2018} observent que la taxonomie du modèle LES ne distingue pas entre les effets qui réduisent la consommation d'un processus existant (qu'ils nomment \emph{save impacts}) et ceux qui accélèrent l'adoption d'un produit ou d'un processus plus soutenable (qu'ils nomment \emph{push impacts}). Un système numérique qui optimise la consommation de chauffage d'un bâtiment produit un \emph{save impact}~; un système qui accélère l'installation de panneaux solaires produit un \emph{push impact}. La distinction est importante parce que le triangle de Spreng, sur lequel le modèle LES s'appuie, suppose implicitement que l'accélération de la production est contraire à la soutenabilité~; or elle peut en être un vecteur si ce qu'on accélère est la substitution technologique. \textcite{santarius_digital_2022}, de leur côté, proposent le concept de \emph{suffisance numérique}, structuré en quatre dimensions~: suffisance matérielle (moins d'appareils, plus durables), suffisance logicielle (réduction du trafic et de l'utilisation des ressources matérielles), suffisance d'usage (pratiques frugales) et suffisance économique (numérisation compatible avec les limites planétaires). Ce cadre est le plus ambitieux dans sa portée~; il est aussi le seul à remettre explicitement en cause le présupposé de croissance qui sous-tend les cadres précédents.
+
+Ces trois contributions partagent une limite commune. Elles classent des \emph{types d'effets} mais ne formalisent pas le \emph{mécanisme structurel} qui produit ces effets. Le modèle LES identifie l'optimisation, la substitution et l'externalisation~; il ne dit pas par quel canal économique une optimisation de processus se traduit (ou ne se traduit pas) en réduction nette d'émissions à l'échelle macro. La distinction save/push identifie deux directions d'impact~; elle ne modélise pas les conditions sous lesquelles l'une domine l'autre. La suffisance numérique pose un objectif~; elle ne spécifie pas les instruments économiques qui permettraient de l'atteindre ni les conséquences macroéconomiques de sa mise en œuvre. Aucun de ces cadres ne distingue les trois fonctions informationnelles (transmettre, stocker, calculer) qui, comme le chapitre~1 l'a montré, produisent des effets économiques et énergétiques qualitativement différents. La catégorie «~effets systémiques~» du modèle LES, en particulier, reste un fourre-tout qui ne permet pas de localiser d'où vient le changement.
+
+
+\subsection{Les discours industriels et la polarisation du débat}\label{subsec:claims}
+
+La question des effets nets de l'ICT sur les émissions a fait l'objet d'un investissement rhétorique considérable de la part de l'industrie numérique. Le rapport \emph{SMARTer~2030} de la Global e-Sustainability Initiative estimait en 2015 que les applications numériques pourraient éviter jusqu'à 20~\% des émissions mondiales de gaz à effet de serre d'ici 2030 \parencite{gesi_smarter_2015}. Ce type d'estimation repose sur un protocole récurrent~: identifier des applications spécifiques (smart grids, télétravail, logistique optimisée), estimer les gains unitaires par étude de cas, puis extrapoler au marché mondial. \textcite{bieser_ghg_2024} ont examiné systématiquement les évaluations de réduction de gaz à effet de serre publiées par les opérateurs de télécommunications et montré que ces évaluations présentent un biais d'optimisme structurel~: les périmètres sont sélectifs (les gains d'efficacité sont inclus, le rebond et la demande induite sont exclus), les estimations sont réalisées ex ante et rarement vérifiées ex post, et l'incertitude n'est pas quantifiée.
+
+Le biais n'est pas propre à l'industrie~; il traverse aussi une partie de la littérature académique. La distinction entre effets «~positifs~» et «~négatifs~» de la numérisation structure implicitement le débat comme une question de bilan net~: l'ICT est-elle, en définitive, bonne ou mauvaise pour le climat~? D'un côté, les évaluations industrielles et certains travaux académiques concluent à un bilan positif~; de l'autre, les travaux sur l'empreinte carbone du numérique \parencite{freitag_real_2021} et sur les effets rebond \parencite{lange_digitalization_2020} concluent à un bilan incertain ou négatif. Les deux camps partagent cependant un même présupposé~: l'ICT aurait un effet net unidirectionnel qu'il s'agirait de mesurer. La thèse défendue ici est différente~: le couplage ICT-énergie est structurellement ambivalent, et l'issue dépend non pas de la technologie en tant que telle mais des conditions institutionnelles, de design et de gouvernance dans lesquelles elle se déploie.
+
+
+\subsection{Ce que les modèles intégrés voient et ne voient pas}\label{subsec:modeles}
+
+Les modèles intégrés d'évaluation (IAMs) constituent l'outil principal par lequel la communauté scientifique traduit les trajectoires de la section précédente en scénarios quantifiés. Deux exercices récents ont tenté, pour la première fois de manière systématique, d'intégrer les effets de la numérisation dans ces modèles.
+
+\textcite{wilson_impacts_2026}, dans un travail auquel l'auteur de cette thèse a contribué, utilisent le modèle MESSAGEix pour évaluer l'incertitude que la numérisation introduit dans les trajectoires d'émissions mondiales. Trois résultats en ressortent. Premièrement, l'incertitude liée à la seule numérisation est du même ordre de grandeur que celle liée à l'ensemble des variables socioéconomiques et démographiques des scénarios SSP1-5~: la numérisation n'est pas un facteur marginal. Deuxièmement, les effets indirects de la numérisation (modifications de la demande de transport, de chauffage, de production industrielle par les applications numériques) dominent les effets directs (consommation des centres de données) d'un facteur cinq environ. Troisièmement, les évaluations existantes à court terme présentent un biais d'optimisme~: elles sélectionnent les applications à effet positif et excluent le rebond. \textcite{beath_impacts_2026}, dans un exercice parallèle avec le modèle TIAM, obtiennent des résultats convergents.
+
+Ces travaux représentent un progrès considérable par rapport à l'état antérieur de la littérature. Ils ont toutefois une limite structurelle que leurs auteurs reconnaissent~: ils traitent la numérisation comme une perturbation appliquée de l'extérieur à un système énergétique par ailleurs inchangé. Les effets de la numérisation sont traduits en «~modificateurs de demande~» sectoriels (le transport demande plus ou moins de kilomètres, le bâtiment demande plus ou moins de chauffage), mais la structure du système elle-même n'est pas modifiée. Le capital computationnel n'est pas un facteur de production dans le modèle~; l'élasticité-prix de la demande de calcul n'est pas différenciée~; la bidirectionnalité (l'ICT consomme de l'énergie et optimise le système qui la produit) n'est pas représentée. En d'autres termes, ces modèles voient la numérisation comme un modificateur de demande, pas comme une transformation de la structure du système.
+
+
+\subsection{Les exercices de scénarisation~: du narratif au paramètre}\label{subsec:scenarisation}
+
+À côté des cadres conceptuels et des modèles intégrés, une troisième famille de travaux cherche à construire des scénarios narratifs de la numérisation et de ses effets climatiques. Ces exercices n'ont pas tous le même statut. Certains sont des revues normatives qui classent les futurs possibles par leur orientation politique et éthique~; d'autres sont des cartographies systémiques produites par élicitation collective~; d'autres encore tentent de traduire des narratifs en paramètres de modèles intégrés. Leur convergence et leurs limites éclairent la position que le présent dispositif expérimental peut occuper.
+
+\textcite{creutzig_digitalization_2022} proposent le cadrage le plus large. Le numérique y est traité non comme un secteur économique mais comme une force de transformation de la technosphère, capable de déstabiliser la planète, de verdir la production sans démocratiser ses bénéfices, ou de servir un bien commun délibéré. Trois futurs sont esquissés~: déstabilisation planétaire, verdissement autoritaire, délibération collective. L'intérêt du cadrage tient à son refus de l'empreinte directe comme unité d'analyse suffisante~; sa limite, symétrique, est qu'il ne descend pas dans les canaux économiques par lesquels ces futurs se réalisent. Le capital n'y est pas un stock irréversible, les marchés ne sont pas analysés par leurs structures de coûts, et la finance n'est pas un mécanisme autonome.
+
+Le workshop organisé par Wilson et Verdolini à l'IIASA en 2024 est l'exercice le plus proche d'une cartographie opérationnelle \parencite{wilson_expert_2025}. Trente-cinq participants, par cartographie participative, identifient des boucles causales dans quatre domaines~: énergie et matériaux, société et comportements, économie et industrie, gouvernance. Quatre dynamiques dominent le domaine énergie-matière~: la matérialisation croissante de l'infrastructure numérique, les gains d'efficacité, le rebond, et une boucle entre rareté des ressources, innovation et relâchement temporaire de la contrainte. Cette dernière boucle dépasse le rebond classique~: le numérique ne fait pas seulement baisser le coût d'un service, il peut rendre plus accessibles les ressources qui limitaient l'activité, ce qui est une lecture ricardienne inversée où la rareté stimule les technologies qui la repoussent, au prix d'une nouvelle matérialisation. La force de l'exercice tient à cette représentation dynamique~; les auteurs notent que la numérisation agit comme amplificateur, terme plus précis que levier car un amplificateur peut amplifier un système mal orienté. La limite est que les narratifs restent binaires~: bons ou mauvais résultats sociétaux. Cette opposition est nécessaire pour un workshop~; elle est insuffisante pour une analyse économique, car elle ne distingue pas les mondes dans lesquels le mauvais résultat advient par accumulation du capital, par saturation matérielle, par automatisation du régime fossile, par fragmentation géopolitique ou par faiblesse du signal de prix.
+
+\textcite{fan_digital_2025} abordent le problème par un autre canal. Ils projettent un indicateur de transformation numérique dans les cinq trajectoires socioéconomiques partagées (SSP), en estimant une relation entre l'indice EGDI, le PIB par tête, la dépense de R\&D et la population sur 62~pays. L'exercice rend visible la fracture numérique~: sous SSP3, une part importante de la population mondiale reste à bas niveau de transformation numérique, ce qui affecte la plausibilité des gains d'efficacité projetés dans les modèles intégrés. La limite est centrale~: Fan et al.\ traitent la numérisation comme un résultat des trajectoires socioéconomiques, non comme un facteur qui les modifie. L'extension enrichit les SSP sans les transformer.
+
+Le WBGU \parencite*{wbgu_digital_2019} apporte la version institutionnelle du problème~: sans action politique formative, la numérisation accélère la consommation de ressources, la consommation d'énergie et les dommages climatiques. La Royal Society \parencite*{royalsociety_digital_2020} apporte le contrepoint technologique~: données, capteurs, modèles, jumeaux numériques, optimisation et coordination pourraient soutenir la transition. \textcite{bugeau_digital_2024} complètent le tableau par une méta-analyse de 35~scénarios prospectifs qui montre que tous contiennent du numérique mais que peu interrogent sa matérialité ou envisagent une réduction de sa place. Ces trois sources fonctionnent comme bornes du débat~: le WBGU dit que sans gouvernance le numérique aggrave les tensions, la Royal Society dit que bien orienté il peut les atténuer, Bugeau et Ligozat disent que la prospective existante ne pose pas assez la question.
+
+Pris ensemble, ces exercices ont fait franchir une étape importante au champ. Ils ont déplacé l'attention de l'empreinte directe vers les effets indirects et systémiques, montré que la numérisation peut soutenir ou compromettre la décarbonation, et commencé à intégrer ses effets dans les scénarios climatiques. Mais ils partagent une limite commune~: le mot \og systémique\fg{} y recouvre des mécanismes très différents --- rebond d'usage, concentration de marché, baisse de la part du travail, capture de capacité électrique, fragmentation géopolitique, accélération de l'extraction fossile --- que la catégorie unifiée empêche de discriminer. De même, le mot \og gouvernance\fg{} y recouvre des objets hétérogènes~: prix du carbone, standards ouverts, contrats d'achat d'électricité, planification du réseau, droit des données, politique de concurrence, communs numériques, normes de sobriété. Sans décomposition, ces termes perdent leur capacité explicative. C'est dans cet espace que le chapitre~2 de cette thèse a construit sa grammaire des structures~: non pas un état de l'art supplémentaire, mais un ensemble de mécanismes causaux --- capital, demande, travail, prix, marchés, organisation, finance, géographie, direction du changement technique --- qui permettent de spécifier \emph{par quel canal} la numérisation devient énergétiquement structurante, et de distinguer les configurations dans lesquelles elle l'est de celles dans lesquelles elle ne l'est pas. Le dispositif expérimental du chapitre~\ref{ch:imaclim} traduira ces mécanismes en paramètres de scénarios.
+
+
+\subsection{Trois absences constitutives}\label{subsec:vide}
+
+La revue qui précède fait apparaître, non pas des lacunes accidentelles, mais trois absences qui sont le produit de la manière dont le champ s'est construit.
+
+Premièrement, à notre connaissance, aucun modèle intégré d'évaluation ne représente la numérisation comme une transformation endogène de la structure du système économique et énergétique. Les exercices les plus récents \parencite{wilson_impacts_2026, beath_impacts_2026} appliquent des perturbations de demande sectorielle~; ils ne modélisent pas le capital computationnel, son irréversibilité, ni les boucles de rétroaction entre investissement numérique et trajectoire énergétique.
+
+Deuxièmement, le paradoxe de Jevons appliqué au calcul~--- l'hypothèse que l'amélioration de l'efficacité énergétique du calcul (loi de Koomey) a paradoxalement accru la consommation totale d'énergie consacrée au calcul~--- n'a pas fait l'objet, à notre connaissance, d'un test économétrique formel. Les éléments qualitatifs existent~: \textcite{freitag_real_2021} notent que la demande globale a dépassé les gains d'efficacité, et utilisent explicitement le langage du paradoxe de Jevons. Mais un test formel, croisant les séries d'efficacité par opération (Koomey) avec les séries de consommation agrégée (IEA, Masanet), n'est pas publié.
+
+Troisièmement, la trajectoire alternative la mieux articulée dans la littérature~--- la suffisance numérique de \textcite{santarius_digital_2022}~--- n'a jamais été traduite en scénario quantifié dans un modèle intégré ou sectoriel. Le concept existe~; ses conséquences macroéconomiques (sur la productivité, l'emploi, la croissance) n'ont pas été évaluées formellement.
+
+Ce triple constat n'est pas un reproche adressé à la littérature existante~; c'est le résultat du cloisonnement entre trois communautés de recherche qui n'ont pas encore convergé. La communauté ICT4S produit des cadres conceptuels et des études de cas mais ne modélise pas à l'échelle macro. La communauté des modèles intégrés représente le système énergétique avec une grande finesse technique mais n'a pas encore intégré la numérisation comme variable structurelle. La communauté de l'économie écologique pense la suffisance et les limites mais ne dispose pas d'outils de quantification à l'échelle des trajectoires globales. C'est dans l'espace laissé vacant par ce triple cloisonnement que la présente thèse se positionne.
+
+Pour comprendre pourquoi cet espace est resté vacant, il faut remonter à la structure historique du rapport entre information et énergie, et à ce que les cadres analytiques dominants ont construit~--- et n'ont pas construit~--- comme objet d'analyse. C'est le travail de la section suivante.
+
+
+% =============================================================================
+\clearpage
+\section{La relation énergie-information dans la longue durée}\label{sec:longue-duree}
+% =============================================================================
+
+\wip{\textbf{Section en cours de rédaction (v3, avril 2026).} Le contenu ci-dessous est un brouillon enrichi.
+
+Cette section reprend le matériau des chapitres~1 et~2 sous l'angle de l'énergie. Elle montre que le rapport ICT-énergie a traversé des configurations historiques distinctes, et que le cadre GPT/GPE standard est structurellement aveugle à cette dimension.
+
+\textbf{\S3.3.1~: Le cadre GPT/GPE et son angle mort énergétique (~3p).}
+\textcite{lipsey_economic_2005}~: Engine$\to$Machine$\to$System$\to$Network. Pervasiveness, improvement, spawning. Ce que le cadre capte bien (dynamique d'innovation, clusters, cycles). Ce qu'il ne voit pas~: la dimension énergétique. Argument central~: chaque GPT antérieure porte son propre Power~--- la vapeur porte le Power of Heat, l'électricité porte le Power of Electric, le moteur à combustion porte le Power of Explosion. La GPT-ICT est la première qui ne porte pas de Power autonome~: elle est parasitaire sur le réseau électrique qu'elle a contribué à construire (Hughes, \emph{Networks of Power}). L'angle mort n'est pas un oubli~: c'est le produit du régime Koomey (1970--2015) où l'efficacité énergétique du calcul doublait tous les 1,57~ans, rendant la consommation d'énergie invisible par les ordres de grandeur. \textcite{nordhaus_computer_2007}~: l'indice de coût du computing n'inclut pas l'électricité~--- symptôme exact de cet angle mort.
+
+\textbf{\S3.3.2~: La longue durée quantitative (~3p).}
+\textcite{grubler_rise_1990} section~4.5~: complémentarité transport-communication sur 200~ans (France). \textcite{grubler_technology_1998} Box~7.2~: même résultat, formulation plus nette. Co-saturations transport-énergie~: canaux+alimentation animale $\sim$1870, rail+charbon $\sim$1930, routes+pétrole $\sim$1970. Paradoxe technologie-environnement (Gray 1989)~: la dématérialisation ne dématérialise pas (le \emph{paperless office} consomme plus de papier). \textcite{fouquet_digitalisation_2023}~: isoquant énergie-information depuis 1850, MRTS déclinant. Décomposition de l'isoquant par fonction TRANSMIT/STORE/COMPUTE (apport propre de la thèse). Pourquoi le MRTS augmente~: la fonction STORE est cumulative et consomme en permanence~--- un fond au sens de Georgescu-Roegen, pas un flux.
+
+\textbf{\S3.3.3~: La périodisation par le rapport improvement/énergie (~2p).}
+Quatre phases~: (1) occultation par les ordres de grandeur (télégraphe~: ratio 1:2\,000 avec le transport), (2) occultation par la surcapacité (réseaux, infrastructures), (3) régime Koomey (efficacité $\times 2$ tous les 1,57~ans, l'énergie reste invisible), (4) inversion possible dans le compute AI (les scaling laws dominent Koomey). Honnêteté sur la complexité~: le Ch.~1 montre une diversité de configurations (pas seulement du technology-push~: le télégraphe ferroviaire est demand-pull, Bell est entrepreneur de marché, le WWW est adoption spontanée). Le Ch.~2 montre que les mécanismes interagissent de manière non triviale (le trilemme D2$\times$D5$\times$D8$\times$0-TER de Roussilhe). La périodisation nomme le rapport \emph{dominant} à chaque époque, pas la totalité.
+
+$\to$ Résultat intermédiaire~: l'histoire montre que le rapport ICT-énergie traverse des régimes. La question~: la période actuelle constitue-t-elle un nouveau régime~?}
+
+
+% =============================================================================
+\clearpage
+\section{La consommation contemporaine~: stratification par couche fonctionnelle}\label{sec:stratification}
+% =============================================================================
+
+\wip{\textbf{Section en cours de rédaction (v3, avril 2026).} Brouillon enrichi.
+
+Cette section localise le changement de régime (s'il existe) et identifie les mécanismes \emph{spécifiques} qui le produisent. Pas \og tout s'inverse\fg{}~: un sous-segment précis (le compute AI) diverge des autres couches.
+
+\textbf{\S3.4.1~: Trois couches, trois régimes (~3p).}
+Réseau~: efficacité croissante (Mytton 2024, Lundén \& Malmodin 2024~: Telefónica +565\,\% trafic, $-7{,}2$\,\% consommation). Stockage classique~: coût/TB décroît. Compute AI~: puissance rack~: 13~kW Ampere 2020, 130~kW Blackwell 2024, 1~MW Rubin 2026. HBM comme composant du compute, pas du stockage. Bifurcation \emph{interne} au compute~: le compute conventionnel reste en Phase~3 (régime Koomey), le compute AI entre dans un régime où la demande de calcul croît plus vite que l'efficacité (Phase~4~?). Ce qui change n'est pas \og le numérique\fg{} mais un sous-segment précis.
+
+\textbf{\S3.4.2~: Les mécanismes du basculement (~4p).}
+Pas une liste de dimensions mais des mécanismes causaux identifiés, avec leurs interactions~:
+
+(a) Le \emph{supply-push} des semi-conducteurs (Roussilhe 2024)~: l'offre crée sa demande pour maintenir les économies d'échelle des fonderies. Ce n'est pas nouveau (§1.3 Hollerith, §1.9 Wintel~: \og what Andy giveth, Bill taketh away\fg{}) mais l'échelle et la vitesse sont sans précédent.
+
+(b) La \emph{performativité des scaling laws}~: les scaling laws de l'IA ne sont pas des observations~; ce sont des dispositifs de coordination de l'investissement. Moore était une prophétie auto-réalisatrice stabilisante (40~ans)~; les scaling laws de l'IA sont plus fragiles (bases mixtes hardware/software, rendements décroissants observés). Kaplan 2020, Hoffmann 2022.
+
+(c) L'\og optimum d'inefficacité de l'inférence\fg{}~: trilemme structurel D2$\times$D5$\times$D8$\times$0-TER~--- les fournisseurs doivent gaspiller assez de compute pour soutenir les fonderies, mais pas trop pour rester rentables, sous contrainte énergétique croissante.
+
+(d) Le \emph{coût marginal par token}~: pour la première fois, l'usage d'un service informationnel a un coût marginal en énergie. Le logiciel classique n'en avait pas (le coût marginal d'un clic Google était négligeable~; le coût marginal d'une requête GPT-4 est mesurable en Wh).
+
+\textbf{\S3.4.3~: Les faits institutionnels (~3p).}
+PPAs nucléaires 20~ans (Three Mile Island, Susquehanna, Kairos), capex hyperscaler $>$ capex secteur électrique US, files d'interconnexion 5--10~ans \parencite{rand_queued_2024}, moratoires (Irlande 2022, Amsterdam 2019, Prince William VA 2024), centrales gaz co-localisées (Schmidt devant le Congrès). Sept séries indépendantes convergent vers la fenêtre 2019--2022 pour le breakpoint. Controverses sur les chiffres~: Masanet vs IEA vs Freitag, divergence d'un facteur~2 sur la consommation globale, ce qui est lui-même un indicateur de la difficulté de mesure.
+
+$\to$ Résultat intermédiaire~: changement localisé (compute AI), daté ($\sim$2018--2022), produit par des mécanismes identifiables. Structurel ou conjoncturel~?}
+
+
+% =============================================================================
+\clearpage
+\section{L'objection~: pourquoi ce n'est pas une industrie électro-intensive ordinaire}\label{sec:objection}
+% =============================================================================
+
+\wip{\textbf{Section à rédiger (v3, avril 2026).}
+
+\textbf{\S3.5.1~: L'objection de l'aluminium (~1p).}
+L'aluminium est un contrôle utile~: industrie électro-intensive, concentration géographique près des sources d'électricité bon marché, capital lourd et long (fonderie 50~ans), impact significatif sur le système électrique local. En apparence, les datacenters sont l'aluminium du XXI\up{e}~siècle. Formuler l'objection avec honnêteté.
+
+\textbf{\S3.5.2~: Trois différences d'un ordre de grandeur (~3p).}
+(a)~\emph{Bidirectionnalité}~: l'ICT consomme et optimise le système qu'elle consomme (smart grids, prévision de charge, intégration ENR). Boucle de rétroaction absente dans l'aluminium. Nuance~: bidirectionnalité sectorielle, pas opérationnelle.
+(b)~\emph{Incommensurabilité temporelle}~: demande aluminium $\sim$2--3\,\%/an~; compute AI $\sim$20--30\,\%/an~; capacité électrique $\sim$2--5\,\%/an. Ratio 4--10 sans précédent.
+(c)~\emph{Irréversibilité dans l'incertitude}~: capital DC irréversible (20--25~ans bâtiment, 3--5~ans GPU), demande incertaine à 3--5~ans (les scaling laws peuvent saturer). Risque de stranded assets numériques.
+
+\textbf{\S3.5.3~: Nuances (~1p).}
+Le ratio peut se réduire. L'irréversibilité est asymétrique (le capital numérique se renouvelle plus vite que l'énergétique). C'est une hypothèse, pas un constat.
+
+$\to$ Résultat intermédiaire~: les indices convergent. On peut formuler la thèse.}
+
+
+% =============================================================================
+\clearpage
+\section{Formulation de la th\`ese}\label{sec:these}
+% =============================================================================
+
+\wip{\textbf{Section \`a r\'ediger (v3, avril 2026).}
+
+\textbf{\S3.6.1~: Synth\`ese des r\'esultats interm\'ediaires (~1p).}
+Rappel des r\'esultats de \S3.1--\S3.5 en une page. Trois syst\`emes en interaction (\S3.1), triple vide dans la litt\'erature (\S3.2), configurations historiques distinctes du rapport ICT-\'energie (\S3.3), changement localis\'e dans le compute AI avec m\'ecanismes identifi\'es (\S3.4), objet sp\'ecifique irr\'eductible \`a l'aluminium (\S3.5).
+
+\textbf{\S3.6.2~: Proposition centrale (~2p).}
+Le d\'eploiement de l'ICT, \`a travers les m\'ecanismes \'economiques qu'il active (et qui l'activent en retour), tend sous le r\'egime actuel vers l'intensification de la consommation \'energ\'etique. Des trajectoires alternatives existent techniquement et sont document\'ees dans la litt\'erature, mais les conditions \'economiques de leur \'emergence syst\'emique ne sont pas r\'eunies. La question exp\'erimentale est~: sous quelles configurations institutionnelles, techniques et de march\'e ces conditions peuvent-elles \^etre r\'eunies, et \`a quelle \'ech\'eance~?
+
+Insister sur la bidirectionnalit\'e~: la technologie peut activer/faire \'emerger des m\'ecanismes \'economiques (le t\'el\'egraphe active la r\'eduction des co\^uts de transaction, D7, et cr\'ee un march\'e unifi\'e, D6), et inversement les m\'ecanismes \'economiques peuvent activer ou bloquer des d\'eveloppements techniques (les rendements croissants D2 des fonderies poussent le compute AI, mais l'absence de financement D8 a bloqu\'e Babbage pendant quarante ans).
+
+\textbf{\S3.6.3~: Ce que la proposition ne dit pas (~1p).}
+Pas irr\'eversible. Pas \og l'IA d\'etruit le climat\fg{}. Le r\'esultat d\'epend des conditions. Le m\^eme couplage produit des trajectoires oppos\'ees selon les configurations institutionnelles. C'est la raison des sc\'enarios du Ch.~\ref{ch:imaclim}, dont certains testent l'invalidation de l'hypoth\`ese.
+
+\textbf{\S3.6.4~: Les conditions d'\'emergence et de non-\'emergence (~3p).}
+Le Ch.~1 documente les deux~: Chappe \'emerge par commande \'etatique-militaire, mais le t\'el\'egraphe commercial n'\'emerge que quand le rail cr\'ee la demande. Babbage existe techniquement mais l'industrie n'\'emerge pas (absence de demand D5 et de financement D8). Le wireless \'emerge comme outil militaire et maritime, mais la radiodiffusion n'\'emerge que quand le r\'ecepteur domestique et le mod\`ele publicitaire apparaissent.
+
+Transpos\'e au r\'egime actuel~: la suffisance num\'erique n'\'emerge pas parce que les rendements croissants des fonderies (D2) exigent une croissance continue de la demande de compute. Les push impacts n'\'emergent pas \`a l'\'echelle parce que le cleantech a besoin d'un prix du carbone pour \^etre comp\'etitif. Le couplage vertueux (coupled digitalisation) n'\'emerge pas syst\'emiquement parce que la gouvernance du r\'eseau \'electrique est fragment\'ee. La sobri\'et\'e low-tech n'\'emerge pas parce que la performativit\'e des scaling laws coordonne l'investissement vers l'intensification.
+
+\textcite{acemoglu_building_2026} (section~7) fournissent un diagnostic micro\'economique convergent~: le march\'e sous-investit dans l'IA pro-worker pour trois raisons~--- les firmes pr\'ef\`erent automatiser pour capter les rentes des travailleurs plut\^ot que pour maximiser la productivit\'e totale, les d\'eveloppeurs d'IA sont verrouill\'es dans des mod\`eles d'affaires orient\'es automation, et l'id\'eologie AGI oriente la recherche vers la substitution plut\^ot que vers la compl\'ementarit\'e. Ce diagnostic ajoute un canal suppl\'ementaire \`a l'analyse des conditions de non-\'emergence~: la trajectoire \emph{coupled digitalisation} ne passe pas \`a l'\'echelle non seulement parce que la gouvernance du r\'eseau est fragment\'ee, mais aussi parce que le type d'IA d\'eploy\'e dans le secteur \'energ\'etique penche vers l'automation substitutive plut\^ot que vers l'augmentation de l'expertise des op\'erateurs. L'\emph{Electrician's Assistant} de Schneider Electric, cit\'e par \textcite{acemoglu_building_2026} comme cas d'IA pro-worker dans les services \'electriques, montre que l'alternative existe techniquement~--- elle ne domine pas.
+
+Documenter les conditions de non-\'emergence est aussi important que documenter l'\'emergence~: c'est ce qui alimente les sc\'enarios du Ch.~\ref{ch:imaclim}.
+
+$\to$ R\'esultat~: hypoth\`ese formul\'ee, conditions d'\'emergence et de non-\'emergence identifi\'ees. Il reste \`a montrer les trajectoires alternatives et comment les tester.}
+
+
+% =============================================================================
+\clearpage
+\section{Trajectoires alternatives et conditions d'\'emergence}\label{sec:trajectoires}
+% =============================================================================
+
+% Restructur\'e le 28 avril 2026 (v3).
+% Remplace l'ancienne version "sous-th\`eses conditionnelles" (ADN, neuromorphique, orbital)
+% qui \'etait trop tourn\'ee vers les trajectoires techniques sp\'eculatives.
+% La nouvelle version documente les 6 trajectoires alternatives de la litt\'erature,
+% explique pourquoi elles restent des niches, et les traduit en sc\'enarios Ch.4.
+
+\wip{\textbf{Section \`a r\'ediger (v3, avril 2026).}
+
+Cette section montre que le r\'egime dominant n'est pas le seul possible. Elle identifie les trajectoires alternatives document\'ees dans la litt\'erature, montre que les conditions de leur passage \`a l'\'echelle ne sont pas r\'eunies, et les traduit en sc\'enarios testables.
+
+\textbf{\S3.7.1~: Six trajectoires document\'ees (~3p).}
+Pour chacune~: auteurs, concept, m\'ecanisme, statut (conceptuel/quantifi\'e/mod\'elis\'e).
+
+(a)~\emph{Suffisance num\'erique} (Santarius et al.~2022)~: r\'eduit la demande par la sobri\'et\'e (hardware, software, usage, \'economique). Conceptuel, non quantifi\'e dans un IAM.
+
+(b)~\emph{Push impacts} (Townsend \& Coroam\u{a} 2018)~: r\'eoriente le supply-push vers la substitution cleantech. Conceptuel, quelques cas sectoriels. Cluster ICT4S/LIMITS quasi isol\'e.
+
+(c)~\emph{Demand-side pathways} (Creutzig et al.~2022, Grubler et al.~2018)~: r\'eduit la croissance de la demande globale. Quantifi\'e (sc\'enario LED, Nature Energy) mais sans module num\'erique explicite.
+
+(d)~\emph{Coupled digitalisation} (litt\'erature smart grid, Strbac et al.~2015, Burger et al.~2020)~: l'ICT pilote le syst\`eme \'energ\'etique qu'elle consomme (bidirectionnalit\'e fonctionnelle). Cas sectoriels empiriques mais pas syst\'emique.
+
+(e)~\emph{Sobri\'et\'e / low-tech} (Roussilhe \& Matthieu, Bihouix, tradition Illich)~: remise en cause du r\'egime dominant dans son ensemble. Non quantifi\'e, non formalis\'e en \'economie.
+
+(f)~\emph{Communs num\'eriques / num\'erisation responsable} (Santarius, Dencik \& Diez 2023, Kovacic et al.~2024)~: conditions institutionnelles d'une num\'erisation compatible avec les limites. Normatif.
+
+\textbf{\S3.7.2~: Pourquoi ces trajectoires restent des niches (~2p).}
+Le r\'egime dominant (supply-push, scaling laws, lock-in) cr\'ee des rendements croissants qui emp\^echent les alternatives d'atteindre l'\'echelle. La suffisance est incompatible avec le mod\`ele d'affaires des fonderies. Le couplage vertueux exige une gouvernance du r\'eseau qui n'existe pas partout. Les push impacts supposent que le cleantech est plus rentable, ce qui d\'epend du prix du carbone. La low-tech n'\'emerge pas parce que la performativit\'e des scaling laws coordonne l'investissement vers l'intensification.
+
+C'est un r\'esultat structurel, pas un jugement de valeur~: documenter la non-\'emergence est aussi important que documenter l'\'emergence.
+
+\textbf{\S3.7.3~: Traduction en sc\'enarios IMACLIM (~2p).}
+Chaque trajectoire alternative se traduit en une configuration de param\`etres~:
+\begin{itemize}
+\item \og Rupture d'efficacit\'e\fg{} $\to$ retour au r\'egime Koomey (neuromorphique, quantique, ADN).
+\item \og AI Flop / Continuit\'e\fg{} $\to$ le compute AI ne p\`ese pas assez (les scaling laws saturent).
+\item \og Course de vitesse\fg{} $\to$ les renouvelables vont plus vite que la demande.
+\item \og Verrouillage\fg{} $\to$ lock-in fossile, conditions de non-\'emergence persistent.
+\item \og Rebond sectoriel\fg{} $\to$ les gains d'efficacit\'e sont r\'einvestis en activit\'e.
+\item \og R\'ef\'erence\fg{} $\to$ d\'eploiement au fil de l'eau sous le r\'egime actuel.
+\end{itemize}
+
+La question exp\'erimentale est~: sous quelles configurations ces trajectoires alternatives atteignent-elles l'\'echelle syst\'emique~? C'est le travail du chapitre~\ref{ch:imaclim}.
+
+Les six trajectoires ci-dessus sont d\'efinies par le c\^ot\'e \'energie du couplage. Le chapitre~\ref{ch:imaclim} introduit un axe orthogonal~--- la direction du changement technique num\'erique au sens d'\textcite{acemoglu_building_2026}~--- qui se croise avec chacune d'entre elles. Cet axe op\`ere par le canal macro\'economique (march\'e du travail $\rightarrow$ distribution des revenus $\rightarrow$ composition de la demande) plut\^ot que par le canal physique (consommation directe, efficacit\'e). Les deux canaux sont ind\'ependants et les sc\'enarios doivent pouvoir les combiner.}
+
+\bigskip
+\begin{center}\rule{0.5\textwidth}{0.4pt}\end{center}
+\bigskip
+
+\noindent\textbf{Point d'\'etape.} Les trois premiers chapitres de cette th\`ese ont observ\'e le couplage ICT-\'energie depuis trois disciplines~: l'histoire des techniques (chapitre~1), l'analyse \'economique (chapitre~2), l'\'economie de l'\'energie (chapitre~3). Chaque chapitre a construit ses propres r\'esultats~: le premier a montr\'e la continuit\'e de la fonction informationnelle et la diversit\'e des configurations push/pull~; le deuxi\`eme a formalis\'e dix dimensions \'economiques et leurs interactions~; le troisi\`eme a identifi\'e le triple vide de la litt\'erature, localis\'e le changement dans le compute AI, et formul\'e la th\`ese du couplage structurel comme hypoth\`ese conditionnelle.
+
+Ce faisceau d'indices converge vers une proposition testable~: le couplage ICT-\'energie, sous le r\'egime actuel, tend vers l'intensification~; des trajectoires alternatives existent mais leurs conditions d'\'emergence syst\'emique ne sont pas r\'eunies~; la question est de savoir sous quelles conditions elles pourraient l'\^etre. Le chapitre suivant construit l'outil capable de tester cette proposition~: un module num\'erique endog\'en\'eis\'e dans le cadre IMACLIM, con\c{c}u pour repr\'esenter les m\'ecanismes que les mod\`eles existants ne voient pas.
+
+
+% =============================================================================
+% NOTE MÉTHODOLOGIQUE — Rapport Ch.3 / évaluation des IAMs
+% Ajoutée le 28 avril 2026, à intégrer dans la rédaction finale.
+% =============================================================================
+%
+% Ce que le Ch.3 produit pour le dispositif expérimental (Ch.4-5) :
+%
+% 1. Un argument d'APPROPRIATENESS au sens de Wilson et al. (2021).
+%    Le triple vide (§3.2.4) montre que les modèles existants ne sont pas
+%    *appropriate* pour la question posée : aucun IAM n'endogénéise la
+%    numérisation, aucun test Jevons pour le compute, aucune suffisance
+%    quantifiée. Le Ch.4 construit le modèle manquant.
+%
+% 2. La MOTIVATION NARRATIVE des scénarios (à la Guivarch 2010).
+%    Chaque scénario naît d'une impasse observable, pas d'un exercice de
+%    sensibilité. Le scénario « Verrouillage » naît de l'observation que
+%    les conditions de non-émergence des alternatives persistent (§3.7.2).
+%    Le scénario « Course de vitesse » naît de l'incommensurabilité
+%    temporelle (§3.5.2). Le scénario « Rupture d'efficacité » teste
+%    l'invalidation de l'hypothèse.
+%
+% 3. Des DONNÉES DE CALIBRATION pour le module numérique.
+%    Les chiffres de §3.1 (IEA, Masanet, Freitag) et §3.4 (puissance rack,
+%    PPA, capex, files d'interconnexion) sont les données d'entrée du
+%    module. Les controverses (écart Masanet/IEA/Freitag d'un facteur 2)
+%    définissent l'intervalle de sensibilité.
+%
+% 4. Le geste à la LE TREUT (2017) : désagréger le compute AI du
+%    « tertiaire » dans la matrice hybride est un argument scientifique,
+%    pas un pré-requis technique. Comme Le Treut isole l'acier de la
+%    métallurgie pour montrer que les résultats changent, le Ch.3 motive
+%    l'isolement du compute AI pour montrer que les trajectoires changent.
+%

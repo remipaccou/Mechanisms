@@ -1,0 +1,10 @@
+%*******************************************************
+% Sommaire — solution directe (contourne tocloft)
+%*******************************************************
+\pdfbookmark[1]{Sommaire}{sommaire}
+\makeatletter
+\chapter*{Sommaire}
+\@mkboth{\spacedlowsmallcaps{Sommaire}}{\spacedlowsmallcaps{Sommaire}}
+\setcounter{tocdepth}{1}
+\@starttoc{toc}
+\makeatother

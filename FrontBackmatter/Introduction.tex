@@ -1,0 +1,52 @@
+%*******************************************************
+% Introduction
+%*******************************************************
+
+\chapter*{Introduction}\label{ch:introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\section*{Plan de la thèse}
+
+Le couplage entre ICT et énergie n'appartient à aucune discipline constituée. L'historien des techniques en voit les manifestations~--- les trajectoires d'innovation, les ruptures de régime, les dépendances au sentier~--- mais il ne mesure ni la productivité agrégée ni les flux physiques. Le macroéconomiste observe des anomalies dans la structure de l'investissement, dans les formes de financement, dans la dynamique sectorielle, mais il ne voit pas les mécanismes techniques qui les produisent ni l'empreinte matérielle qui en résulte. L'économiste de l'énergie, enfin, mesure des consommations, identifie des effets rebond, quantifie des trajectoires d'émissions~--- mais les formes institutionnelles qui organisent ces flux lui échappent pour l'essentiel. Chacune de ces perspectives a son domaine de certitude et ses angles morts~; chacune constate des faits que les deux autres ne voient pas, et suppose des liens qu'elle ne peut pas établir seule. Les trois premiers chapitres de cette thèse tirent parti de cette asymétrie plutôt que de la contourner. Chacun se place délibérément dans l'un de ces cadres disciplinaires~--- l'histoire des techniques, la macroéconomie, l'économie de l'énergie~--- et observe de là les deux autres. Le premier chapitre, ancré dans l'ICT, constate des trajectoires techniques et laisse émerger du récit lui-même les questions macroéconomiques et énergétiques auxquelles il ne saurait répondre. Le deuxième, ancré dans l'analyse économique, constate des transformations de structure et pose des questions sur leur empreinte physique que seul le troisième pourra prendre en charge. Le troisième, ancré dans l'énergie, boucle vers les deux premiers en montrant que les contraintes matérielles qu'il documente ne se comprennent qu'à la lumière des mécanismes techniques et économiques établis dans les chapitres précédents. La progression n'est donc pas linéaire~: elle est spiralaire, chaque chapitre enrichissant rétrospectivement la lecture des précédents. Au terme de ce parcours, le couplage ICT-énergie apparaît comme un objet qu'aucune des trois disciplines ne saisit seule, mais que leur croisement rend visible. C'est cette visibilité acquise qui légitime~--- et qui appelle~--- le passage à la modélisation.
+
+Le \autoref{ch:history} procède par induction. Il retrace l'histoire des techniques de l'information du télégraphe au datacenter en suivant dix cas, chacun observé au prisme de l'économie, de l'énergie et des ressources matérielles. De chaque cas émergent des observations que le récit lui-même fait surgir~--- sans grille posée a priori~--- sur les structures économiques que l'ICT active ou transforme et sur les liens, souvent occultés, entre l'infrastructure informationnelle et son substrat physique. Le chapitre se conclut par une réduction typologique qui ordonne ces observations en dix dimensions économiques et une dimension transversale (énergie-matière), constituant la grille analytique de la thèse.
+
+Le \autoref{ch:economics} soumet ces dimensions à une analyse économique systématique. Chaque dimension est confrontée à son interlocuteur théorique~--- Williamson pour les coûts de transaction, Nelson et Winter pour les trajectoires d'innovation, Perez pour les cycles de financement, et ainsi de suite~--- et fait l'objet d'une double lecture physique et monétaire. Le chapitre établit les canaux par lesquels l'ICT transforme les structures productives et identifie, dimension par dimension, les points où cette transformation engage le système énergétique.
+
+Le \autoref{ch:energy} confronte ces canaux aux réalités du système énergie-climat-ressources. Il documente les effets matériels et environnementaux de l'infrastructure de calcul~--- consommation électrique des centres de données, empreinte de fabrication des composants, demande en matériaux critiques~--- et examine les développements contemporains (semi-conducteurs avancés, IA générative, scaling laws) qui accélèrent le couplage. Le chapitre identifie les conditions sous lesquelles le calcul peut effectivement appuyer la décarbonation, et celles sous lesquelles il la compromet. Il débouche sur la proposition centrale de la thèse et les questions de recherche qui en découlent.
+
+Le \autoref{ch:imaclim} construit le dispositif expérimental. Une première partie analyse les stratégies de modélisation disponibles pour représenter le couplage ICT-énergie et justifie le choix du cadre IMACLIM~--- modèle hybride qui articule une représentation macroéconomique en valeur et une représentation physique des flux d'énergie, ce qui en fait l'outil adapté pour endogénéiser simultanément les mécanismes économiques du chapitre~2 et les contraintes matérielles du chapitre~3. Une seconde partie construit les scénarios~: narratifs, hypothèses structurantes et choix d'endogénéisation qui répondent aux questions de recherche posées par le chapitre précédent.
+
+Le \autoref{ch:scenarios} présente les résultats de la modélisation et les interprète à la lumière des mécanismes identifiés dans les trois premiers chapitres.
+
+Le \autoref{ch:results} discute les résultats et en tire les implications.
+
+Le \autoref{ch:discussion} ouvre des perspectives.
+
+\section*{La transition numérique comme question énergétique}
+
+Depuis deux décennies, la transition numérique est présentée comme un vecteur de décarbonation et de croissance dématérialisée. Les technologies de l'information et de la communication optimiseraient les processus industriels, réduiraient les besoins de déplacement, rendraient les réseaux électriques intelligents. Cette promesse s'accompagne d'un récit implicite~: le numérique serait essentiellement immatériel, et son empreinte énergétique, négligeable au regard des gains d'efficacité qu'il procure.
+
+Or les faits résistent à ce récit. La consommation électrique des datacenters croît désormais 2,5 fois plus vite que la demande totale d'énergie. Les modèles d'intelligence artificielle à grande échelle requièrent des puissances de calcul qui doublent tous les quelques mois. Les géants du numérique signent des contrats d'approvisionnement en énergie nucléaire pour alimenter leurs infrastructures. Le numérique n'est pas immatériel~: il est une industrie lourde de l'information, dont le substrat est l'électricité.
+
+Cette thèse part de ce constat pour poser une question à la fois simple et structurante~: quelles sont les dimensions économiques et énergétiques de l'infrastructure ICT, et comment les représenter dans les outils d'analyse et de modélisation~?
+
+\section*{Les enjeux de représentation}
+
+La réponse à cette question se heurte à un problème de représentation. Les modèles économiques traitent le plus souvent l'ICT comme un facteur de productivité exogène~: un chiffre qui entre dans une fonction de production, un paramètre qu'on calibre sur des données passées. Les modèles énergie-climat, de leur côté, représentent la consommation des datacenters comme un poste de demande électrique parmi d'autres, sans endogénéiser les mécanismes qui font croître cette demande.
+
+Entre les deux, un angle mort~: personne ne modélise le couplage structurel entre le calcul et l'énergie. Personne ne représente le fait que la loi de Moore, en améliorant l'efficacité unitaire du calcul, a paradoxalement multiplié la demande agrégée d'énergie~--- un paradoxe de Jevons computationnel que les cadres analytiques existants ne capturent pas.
+
+Cette thèse propose de combler cet angle mort. Pour cela, elle établit d'abord l'existence et la nature du couplage ICT-énergie en le regardant depuis trois disciplines~--- l'histoire des techniques, la macroéconomie, l'économie de l'énergie~--- puis elle le modélise dans un cadre énergie-économie-climat.
+
+\section*{Questions de recherche}
+
+La question générale se décline en plusieurs sous-questions~:
+
+\begin{itemize}
+    \item Comment le couplage entre ICT et énergie s'est-il construit historiquement, et pourquoi est-il devenu structurel après 1971~?
+    \item Quels sont les canaux économiques par lesquels l'ICT transforme la structure productive, et quelles sont les implications pour la demande d'énergie~?
+    \item Les promesses de décarbonation par l'ICT résistent-elles à l'examen empirique~? Quelles sont les barrières systémiques~?
+    \item Comment endogénéiser le calcul dans un modèle énergie-économie-climat tel qu'IMACLIM~?
+    \item Quels scénarios émergent lorsqu'on distingue un déploiement ICT volontariste et coordonné d'un déploiement au fil de l'eau~?
+\end{itemize}

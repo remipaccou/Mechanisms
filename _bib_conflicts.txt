@@ -1,0 +1,891 @@
+# 42 conflits — clé identique, contenu différent
+# La version de Bibliography.bib est conservée par défaut.
+
+=== juhasz_spinning_2018 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@unpublished{juhasz_spinning_2018, author={Juhász, Réka and Steinwender, Claudia}, title={Spinning the Web: The Impact of {ICT} on Trade in Intermediates and Technology Diffusion}, year={2018}, note={Working paper.}}
+
+--- Source (ignoré) ---
+
+@article{juhasz_spinning_2018,
+  author  = {Juh{\'a}sz, R{\'e}ka and Steinwender, Claudia},
+  title   = {Spinning the Web: The Impact of {ICT} on Trade in Intermediates and Technology Diffusion},
+  year    = {2018},
+  note    = {NBER Working Paper No.\ 24590},
+}
+
+
+=== haskel_capitalism_2018 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{haskel_capitalism_2018,
+  author    = {Haskel, Jonathan and Westlake, Stian},
+  title     = {Capitalism without Capital: The Rise of the Intangible Economy},
+  year      = {2018},
+  publisher = {Princeton University Press},
+  address   = {Princeton, NJ},
+}
+
+--- Source (ignoré) ---
+
+@book{haskel_capitalism_2018,
+  author    = {Haskel, Jonathan and Westlake, Stian},
+  title     = {Capitalism without Capital: The Rise of the Intangible Economy},
+  year      = {2018},
+  publisher = {Princeton University Press},
+  address   = {Princeton},
+}
+
+
+=== goldfarb_digital_2019 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{goldfarb_digital_2019,
+  author  = {Goldfarb, Avi and Tucker, Catherine},
+  title   = {Digital Economics},
+  journal = {Journal of Economic Literature},
+  volume  = {57},
+  number  = {1},
+  pages   = {3--43},
+  year    = {2019},
+}
+
+--- Source (ignoré) ---
+
+@article{goldfarb_digital_2019,
+  author  = {Goldfarb, Avi and Tucker, Catherine},
+  title   = {Digital Economics},
+  journal = {Journal of Economic Literature},
+  volume  = {57},
+  number  = {1},
+  pages   = {3--43},
+  year    = {2019},
+  doi     = {10.1257/jel.20171452},
+}
+
+
+=== kaplan_scaling_2020 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{kaplan_scaling_2020,
+  author    = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+  title     = {Scaling Laws for Neural Language Models},
+  journal   = {arXiv preprint},
+  year      = {2020},
+  eprint    = {2001.08361},
+  archiveprefix = {arXiv},
+}
+
+--- Source (ignoré) ---
+
+@article{kaplan_scaling_2020,
+  author  = {Kaplan, Jared and McCandlish, Sam and Henighan, Tom and Brown, Tom B. and Chess, Benjamin and Child, Rewon and Gray, Scott and Radford, Alec and Wu, Jeffrey and Amodei, Dario},
+  title   = {Scaling Laws for Neural Language Models},
+  journal = {arXiv preprint},
+  year    = {2020},
+  note    = {arXiv:2001.08361},
+}
+
+
+=== cottier_rapid_2025 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@misc{cottier_rapid_2025,
+  author    = {Cottier, Ben and others},
+  title     = {The Rapid Drop in {AI} Inference Costs},
+  year      = {2025},
+  publisher = {Epoch AI},
+  note      = {Research Note},
+}
+
+--- Source (ignoré) ---
+
+@article{cottier_rapid_2025,
+  author  = {Cottier, Ben and Besiroglu, Tamay and Owen, David},
+  title   = {The Rapid Rise in Federal Government Spending on Artificial Intelligence},
+  year    = {2025},
+  note    = {Epoch AI Technical Report},
+}
+
+
+=== arrow_welfare_1962 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{arrow_welfare_1962,
+  author    = {Arrow, Kenneth J.},
+  title     = {Economic Welfare and the Allocation of Resources for Invention},
+  booktitle = {The Rate and Direction of Inventive Activity},
+  publisher = {Princeton University Press},
+  year      = {1962},
+  pages     = {609--626},
+}
+
+--- Source (ignoré) ---
+
+@article{arrow_welfare_1962,
+  author  = {Arrow, Kenneth J.},
+  title   = {Economic Welfare and the Allocation of Resources for Invention},
+  journal = {The Rate and Direction of Inventive Activity: Economic and Social Factors},
+  pages   = {609--626},
+  year    = {1962},
+  publisher = {Princeton University Press},
+  note    = {NBER Conference Volume},
+}
+
+
+=== romer_endogenous_1990 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{romer_endogenous_1990,
+  author  = {Romer, Paul M.},
+  title   = {Endogenous Technological Change},
+  journal = {Journal of Political Economy},
+  year    = {1990},
+  volume  = {98},
+  number  = {5},
+  pages   = {S71--S102},
+}
+
+--- Source (ignoré) ---
+
+@article{romer_endogenous_1990,
+  author  = {Romer, Paul M.},
+  title   = {Endogenous Technological Change},
+  journal = {Journal of Political Economy},
+  volume  = {98},
+  number  = {5},
+  pages   = {S71--S102},
+  year    = {1990},
+  doi     = {10.1086/261725},
+}
+
+
+=== steinwender_real_2018 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{steinwender_real_2018, author={Steinwender, Claudia}, title={Real Effects of Information Frictions}, journal={American Economic Review}, year={2018}, volume={108}, number={3}, pages={657--696}, doi={10.1257/aer.20150681}}
+
+--- Source (ignoré) ---
+
+@article{steinwender_real_2018,
+  author  = {Steinwender, Claudia},
+  title   = {Real Effects of Information Frictions: When the States and the Kingdom Became United},
+  journal = {American Economic Review},
+  volume  = {108},
+  number  = {3},
+  pages   = {657--696},
+  year    = {2018},
+  doi     = {10.1257/aer.20150681},
+}
+
+
+=== johansen_substitution_1959 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{johansen_substitution_1959,
+  author  = {Johansen, Leif},
+  title   = {Substitution versus Fixed Production Coefficients in the Theory of Economic Growth: A Synthesis},
+  journal = {Econometrica},
+  year    = {1959},
+  volume  = {27},
+  number  = {2},
+  pages   = {157--176},
+}
+
+--- Source (ignoré) ---
+
+@article{johansen_substitution_1959,
+  author  = {Johansen, Leif},
+  title   = {Substitution versus Fixed Production Coefficients in the Theory of Economic Growth: A Synthesis},
+  journal = {Econometrica},
+  volume  = {27},
+  number  = {2},
+  pages   = {157--176},
+  year    = {1959},
+}
+
+
+=== hoffmann_training_2022 (source: d1_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{hoffmann_training_2022,
+  author  = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and {de Las Casas}, Diego and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Tom and Noland, Eric and Millican, Katie and {van den Driessche}, George and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karen and Elsen, Erich and Rae, Jack W. and Vinyals, Oriol and Sifre, Laurent},
+  title   = {Training Compute-Optimal Large Language Models},
+  year    = {2022},
+  note    = {arXiv:2203.15556},
+}
+
+--- Source (ignoré) ---
+
+@article{hoffmann_training_2022,
+  author  = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and {de Las Casas}, Diego and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Tom and Noland, Eric and Millican, Katie and {van den Driessche}, George and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karen and Elsen, Erich and Rae, Jack W. and Vinyals, Oriol and Sifre, Laurent},
+  title   = {Training Compute-Optimal Large Language Models},
+  journal = {arXiv preprint},
+  year    = {2022},
+  note    = {arXiv:2203.15556},
+}
+
+
+=== autor_fall_2020 (source: d6_bib_entries.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{autor_fall_2020,
+  author  = {Autor, David and Dorn, David and Katz, Lawrence F. and Patterson, Christina and Van Reenen, John},
+  title   = {The Fall of the Labor Share and the Rise of Superstar Firms},
+  journal = {Quarterly Journal of Economics},
+  volume  = {135},
+  number  = {2},
+  pages   = {645--709},
+  year    = {2020},
+  doi     = {10.1093/qje/qjaa004},
+}
+
+--- Source (ignoré) ---
+
+@article{autor_fall_2020,
+  author  = {Autor, David and Dorn, David and Katz, Lawrence F. and Patterson, Christina and Van Reenen, John},
+  title   = {The Fall of the Labor Share and the Rise of Superstar Firms},
+  journal = {Quarterly Journal of Economics},
+  year    = {2020},
+  volume  = {135},
+  number  = {2},
+  pages   = {645--709},
+}
+
+
+=== steinwender_real_2018 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{steinwender_real_2018, author={Steinwender, Claudia}, title={Real Effects of Information Frictions}, journal={American Economic Review}, year={2018}, volume={108}, number={3}, pages={657--696}, doi={10.1257/aer.20150681}}
+
+--- Source (ignoré) ---
+
+@article{steinwender_real_2018,
+  author  = {Steinwender, Claudia},
+  title   = {Real Effects of Information Frictions: When the States and the Kingdom Became United},
+  journal = {American Economic Review},
+  volume  = {108},
+  number  = {3},
+  pages   = {657--696},
+  year    = {2018},
+  doi     = {10.1257/aer.20150681},
+}
+
+
+=== juhasz_spinning_2018 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@unpublished{juhasz_spinning_2018, author={Juhász, Réka and Steinwender, Claudia}, title={Spinning the Web: The Impact of {ICT} on Trade in Intermediates and Technology Diffusion}, year={2018}, note={Working paper.}}
+
+--- Source (ignoré) ---
+
+@unpublished{juhasz_spinning_2018,
+  author = {Juhász, Réka and Steinwender, Claudia},
+  title  = {Spinning the Web: The Impact of {ICT} on Trade in Intermediates and Technology Diffusion},
+  year   = {2018},
+  note   = {Working paper.},
+  url    = {https://www.rjuhasz.com/research/spinning_the_web_201810.pdf},
+}
+
+
+=== wu2010master (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{wu2010master,
+  author = {Wu, Tim}, title = {The Master Switch},
+  year = {2010}, publisher = {Knopf},
+}
+
+--- Source (ignoré) ---
+
+@book{wu2010master,
+  author    = {Wu, Tim},
+  title     = {The Master Switch: The Rise and Fall of Information Empires},
+  year      = {2010},
+  publisher = {Knopf},
+}
+
+
+=== chandler1977visible (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{chandler1977visible,
+  author = {Chandler, Alfred D., Jr.}, title = {The Visible Hand},
+  year = {1977}, publisher = {Harvard University Press}, isbn = {978-0674940529},
+}
+
+--- Source (ignoré) ---
+
+@book{chandler1977visible,
+  author    = {Chandler, Alfred D., Jr.},
+  title     = {The Visible Hand: The Managerial Revolution in {American} Business},
+  year      = {1977},
+  publisher = {Harvard University Press},
+  note      = {Chapitres 3--5 sur les railroads.},
+}
+
+
+=== beniger_control_1986 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{beniger_control_1986,
+  author    = {Beniger, James R.},
+  title     = {The Control Revolution: Technological and Economic Origins of the Information Society},
+  year      = {1986},
+  publisher = {Harvard University Press},
+  isbn      = {978-0674169869},
+}
+
+--- Source (ignoré) ---
+
+@book{beniger_control_1986,
+  author    = {Beniger, James R.},
+  title     = {The Control Revolution: Technological and Economic Origins of the Information Society},
+  year      = {1986},
+  publisher = {Harvard University Press},
+  note      = {Chapitres 5--6 sur la crise de contrôle et les six formes.},
+}
+
+
+=== schwantes_train_2019 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{schwantes_train_2019,
+  author    = {Schwantes, Benjamin S. M.},
+  title     = {The Train and the Telegraph: A Revisionist History},
+  year      = {2019},
+  publisher = {Johns Hopkins University Press},
+  isbn      = {978-1421427713},
+}
+
+--- Source (ignoré) ---
+
+@book{schwantes_train_2019,
+  author    = {Schwantes, Benjamin S. M.},
+  title     = {The Train and the Telegraph: A Revisionist History},
+  year      = {2019},
+  publisher = {Johns Hopkins University Press},
+}
+
+
+=== hayek_use_1945 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{hayek_use_1945,
+  author    = {Hayek, Friedrich A.},
+  title     = {The Use of Knowledge in Society},
+  journal   = {American Economic Review},
+  year      = {1945},
+  volume    = {35},
+  number    = {4},
+  pages     = {519--530},
+  url       = {https://www.jstor.org/stable/1809376},
+}
+
+--- Source (ignoré) ---
+
+@article{hayek_use_1945,
+  author  = {Hayek, Friedrich A.},
+  title   = {The Use of Knowledge in Society},
+  journal = {American Economic Review},
+  volume  = {35},
+  number  = {4},
+  pages   = {519--530},
+  year    = {1945},
+}
+
+
+=== eisenhardt_building_1989 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{eisenhardt_building_1989,
+  author    = {Eisenhardt, Kathleen M.},
+  title     = {Building Theories from Case Study Research},
+  journal   = {Academy of Management Review},
+  year      = {1989},
+  volume    = {14},
+  number    = {4},
+  pages     = {532--550},
+  doi       = {10.5465/amr.1989.4308385},
+}
+
+--- Source (ignoré) ---
+
+@article{eisenhardt_building_1989,
+  author  = {Eisenhardt, Kathleen M.},
+  title   = {Building Theories from Case Study Research},
+  journal = {Academy of Management Review},
+  volume  = {14},
+  number  = {4},
+  pages   = {532--550},
+  year    = {1989},
+}
+
+
+=== david1990dynamo (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{david1990dynamo,
+  author = {David, Paul A.}, title = {The Dynamo and the Computer},
+  journal = {American Economic Review Papers \& Proceedings}, year = {1990}, volume = {80}, number = {2}, pages = {355--361},
+}
+
+--- Source (ignoré) ---
+
+@article{david1990dynamo,
+  author  = {David, Paul A.},
+  title   = {The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox},
+  journal = {American Economic Review Papers \& Proceedings},
+  volume  = {80},
+  number  = {2},
+  pages   = {355--361},
+  year    = {1990},
+}
+
+
+=== tully_victorian_2009 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{tully_victorian_2009, author={Tully, John}, title={A {Victorian} Ecological Disaster}, journal={Journal of World History}, year={2009}, volume={20}, number={4}, pages={559--579}}
+
+--- Source (ignoré) ---
+
+@article{tully_victorian_2009,
+  author  = {Tully, John},
+  title   = {A {Victorian} Ecological Disaster: Imperialism, the Telegraph, and Gutta-Percha},
+  journal = {Journal of World History},
+  volume  = {20},
+  number  = {4},
+  pages   = {559--579},
+  year    = {2009},
+}
+
+
+=== fitzmaurice_material_2023 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@phdthesis{fitzmaurice_material_2023, author={FitzMaurice, Sophie J.}, title={The Material Telegraph}, school={University of California, Berkeley}, year={2023}}
+
+--- Source (ignoré) ---
+
+@phdthesis{fitzmaurice_material_2023,
+  author = {FitzMaurice, Sophie J.},
+  title  = {The Material Telegraph: An Environmental History of the Technology that Wired {America}, c.~1848--1920},
+  school = {University of California, Berkeley},
+  year   = {2023},
+}
+
+
+=== hunt_imperial_2021 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{hunt_imperial_2021, author={Hunt, Bruce J.}, title={Imperial Science}, year={2021}, publisher={Cambridge University Press}}
+
+--- Source (ignoré) ---
+
+@book{hunt_imperial_2021,
+  author    = {Hunt, Bruce J.},
+  title     = {Imperial Science: Cable Telegraphy and Electrical Physics in the {Victorian} {British} {Empire}},
+  year      = {2021},
+  publisher = {Cambridge University Press},
+}
+
+
+=== kieve_electric_1973 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{kieve_electric_1973, author={Kieve, Jeffrey L.}, title={The Electric Telegraph: A Social and Economic History}, year={1973}, publisher={David \& Charles}}
+
+--- Source (ignoré) ---
+
+@book{kieve_electric_1973,
+  author    = {Kieve, Jeffrey L.},
+  title     = {The Electric Telegraph: A Social and Economic History},
+  year      = {1973},
+  publisher = {David \& Charles},
+}
+
+
+=== nonnenmacher_telegraph_2001 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{nonnenmacher_telegraph_2001, author={Nonnenmacher, Tomas}, title={History of the {U.S.} Telegraph Industry}, journal={EH.net Encyclopedia}, year={2001}}
+
+--- Source (ignoré) ---
+
+@article{nonnenmacher_telegraph_2001,
+  author  = {Nonnenmacher, Tomas},
+  title   = {History of the {U.S.} Telegraph Industry},
+  journal = {EH.net Encyclopedia},
+  year    = {2001},
+}
+
+
+=== bertho_histoire_1984 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{bertho_histoire_1984, author={Bertho, Catherine}, title={Histoire des télécommunications en France}, year={1984}, publisher={Erès}, address={Toulouse}}
+
+--- Source (ignoré) ---
+
+@book{bertho_histoire_1984,
+  author    = {Bertho, Catherine},
+  title     = {Histoire des télécommunications en France},
+  year      = {1984},
+  publisher = {Erès},
+}
+
+
+=== ducamp_telegraphe_1869 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{ducamp_telegraphe_1869, author={Du Camp, Maxime}, title={Le Télégraphe et l'administration télégraphique}, journal={Revue des Deux Mondes}, year={1869}}
+
+--- Source (ignoré) ---
+
+@article{ducamp_telegraphe_1869,
+  author  = {Du Camp, Maxime},
+  title   = {Le Télégraphe et l'administration télégraphique},
+  journal = {Revue des Deux Mondes},
+  year    = {1869},
+}
+
+
+=== gordon_capital_nineteenth (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@incollection{gordon_capital_nineteenth, author={Gordon, Robert J.}, title={Capital in the Nineteenth Century}, booktitle={NBER Studies in Income and Wealth}, year={2016}, publisher={NBER}}
+
+--- Source (ignoré) ---
+
+@incollection{gordon_capital_nineteenth,
+  author    = {Gordon, Robert J.},
+  title     = {Capital in the Nineteenth Century},
+  booktitle = {NBER Studies in Income and Wealth},
+  year      = {2016},
+  publisher = {NBER},
+}
+
+
+=== gordon_thread_2002 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{gordon_thread_2002, author={Gordon, John Steele}, title={A Thread Across the Ocean}, year={2002}, publisher={Walker \& Company}}
+
+--- Source (ignoré) ---
+
+@book{gordon_thread_2002,
+  author    = {Gordon, John Steele},
+  title     = {A Thread Across the Ocean: The Heroic Story of the Transatlantic Cable},
+  year      = {2002},
+  publisher = {Walker \& Company},
+}
+
+
+=== yates_control_1989 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{yates_control_1989,
+  author    = {Yates, JoAnne},
+  title     = {Control through Communication: The Rise of System in {American} Management},
+  year      = {1989},
+  publisher = {Johns Hopkins University Press},
+  isbn      = {978-0801846137},
+}
+
+--- Source (ignoré) ---
+
+@book{yates_control_1989,
+  author    = {Yates, JoAnne},
+  title     = {Control through Communication: The Rise of System in {American} Management},
+  year      = {1989},
+  publisher = {Johns Hopkins University Press},
+}
+
+
+=== miller_railway_2003 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{miller_railway_2003,
+  author    = {Miller, Roger C. B.},
+  title     = {railway.com: Parallels between the Early {British} Railways and the {ICT} Revolution},
+  year      = {2003},
+  publisher = {Institute of Economic Affairs},
+  series    = {IEA Research Monograph},
+  number    = {57},
+}
+
+--- Source (ignoré) ---
+
+@book{miller_railway_2003,
+  author    = {Miller, Roger C. B.},
+  title     = {railway.com: Parallels between the Early {British} Railways and the {ICT} Revolution},
+  year      = {2003},
+  publisher = {Institute of Economic Affairs},
+}
+
+
+=== fishlow_productivity_1966 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@incollection{fishlow_productivity_1966,
+  author    = {Fishlow, Albert},
+  title     = {Productivity and Technological Change in the Railroad Sector, 1840--1910},
+  booktitle = {Output, Employment, and Productivity in the {United States} After 1800},
+  publisher = {National Bureau of Economic Research},
+  year      = {1966},
+  pages     = {583--646},
+  series    = {Studies in Income and Wealth},
+  volume    = {30},
+}
+
+--- Source (ignoré) ---
+
+@incollection{fishlow_productivity_1966,
+  author    = {Fishlow, Albert},
+  title     = {Productivity and Technological Change in the Railroad Sector, 1840--1910},
+  booktitle = {Output, Employment, and Productivity in the {United States} After 1800},
+  year      = {1966},
+  publisher = {NBER},
+}
+
+
+=== field_magnetic_1992 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@article{field_magnetic_1992,
+  author    = {Field, Alexander J.},
+  title     = {The Magnetic Telegraph, Price and Quantity Data, and the New Management of Capital},
+  journal   = {Journal of Economic History},
+  year      = {1992},
+  volume    = {52},
+  number    = {2},
+  pages     = {401--413},
+  doi       = {10.1017/S0022050700010834},
+}
+
+--- Source (ignoré) ---
+
+@article{field_magnetic_1992,
+  author  = {Field, Alexander J.},
+  title   = {The Magnetic Telegraph, Price and Quantity Data, and the New Management of Capital},
+  journal = {Journal of Economic History},
+  volume  = {52},
+  number  = {2},
+  pages   = {401--413},
+  year    = {1992},
+}
+
+
+=== rosenberg1982inside (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{rosenberg1982inside,
+  author = {Rosenberg, Nathan}, title = {Inside the Black Box},
+  year = {1982}, publisher = {Cambridge University Press},
+}
+
+--- Source (ignoré) ---
+
+@book{rosenberg1982inside,
+  author    = {Rosenberg, Nathan},
+  title     = {Inside the Black Box: Technology and Economics},
+  year      = {1982},
+  publisher = {Cambridge University Press},
+}
+
+
+=== lipsey2005economic (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{lipsey2005economic,
+  author = {Lipsey, Richard G. and Carlaw, Kenneth I. and Bekar, Clifford T.},
+  title = {Economic Transformations}, year = {2005}, publisher = {Oxford University Press},
+}
+
+--- Source (ignoré) ---
+
+@book{lipsey2005economic,
+  author    = {Lipsey, Richard G. and Carlaw, Kenneth I. and Bekar, Clifford T.},
+  title     = {Economic Transformations: General Purpose Technologies and Long-Term Economic Growth},
+  year      = {2005},
+  publisher = {Oxford University Press},
+  note      = {Ch. 4 sur les micro-fondations des GPT.},
+}
+
+
+=== perez2002technological (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{perez2002technological,
+  author = {Perez, Carlota}, title = {Technological Revolutions and Financial Capital},
+  year = {2002}, publisher = {Edward Elgar},
+}
+
+--- Source (ignoré) ---
+
+@book{perez2002technological,
+  author    = {Perez, Carlota},
+  title     = {Technological Revolutions and Financial Capital: The Dynamics of Bubbles and Golden Ages},
+  year      = {2002},
+  publisher = {Edward Elgar},
+}
+
+
+=== coase1937nature (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@article{coase1937nature,
+  author = {Coase, Ronald H.}, title = {The Nature of the Firm},
+  journal = {Economica}, year = {1937}, volume = {4}, number = {16}, pages = {386--405},
+  doi = {10.1111/j.1468-0335.1937.tb00002.x},
+}
+
+--- Source (ignoré) ---
+
+@article{coase1937nature,
+  author  = {Coase, Ronald H.},
+  title   = {The Nature of the Firm},
+  journal = {Economica},
+  volume  = {4},
+  number  = {16},
+  pages   = {386--405},
+  year    = {1937},
+}
+
+
+=== znaniecki_method_1934 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{znaniecki_method_1934,
+  author    = {Znaniecki, Florian},
+  title     = {The Method of Sociology},
+  year      = {1934},
+  publisher = {Farrar \& Rinehart},
+  address   = {New York},
+}
+
+--- Source (ignoré) ---
+
+@book{znaniecki_method_1934,
+  author    = {Znaniecki, Florian},
+  title     = {The Method of Sociology},
+  year      = {1934},
+  publisher = {Farrar \& Rinehart},
+  address   = {New York},
+  note      = {Origine du terme « induction analytique ».},
+}
+
+
+=== schumpeter1939business (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+@book{schumpeter1939business,
+  author = {Schumpeter, Joseph A.}, title = {Business Cycles},
+  year = {1939}, publisher = {McGraw-Hill}, note = {2 volumes},
+}
+
+--- Source (ignoré) ---
+
+@book{schumpeter1939business,
+  author    = {Schumpeter, Joseph A.},
+  title     = {Business Cycles: A Theoretical, Historical, and Statistical Analysis of the Capitalist Process},
+  year      = {1939},
+  publisher = {McGraw-Hill},
+  note      = {2 volumes. Précédent direct : traversée historique analytique qui produit des catégories économiques.},
+}
+
+
+=== yin_case_2018 (source: lectures_25mars.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{yin_case_2018,
+  author    = {Yin, Robert K.},
+  title     = {Case Study Research and Applications: Design and Methods},
+  year      = {2018},
+  edition   = {6},
+  publisher = {Sage},
+  address   = {Thousand Oaks, CA},
+}
+
+--- Source (ignoré) ---
+
+@book{yin_case_2018,
+  author    = {Yin, Robert K.},
+  title     = {Case Study Research and Applications: Design and Methods},
+  edition   = {6},
+  year      = {2018},
+  publisher = {Sage},
+}
+
+
+=== kittler_grammophon_1986 (source: longo_kittler_refs.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{kittler_grammophon_1986,
+  author    = {Kittler, Friedrich A.},
+  title     = {Grammophon, Film, Typewriter},
+  publisher = {Brinkmann \& Bose},
+  address   = {Berlin},
+  year      = {1986},
+  note      = {Traduction anglaise~: \emph{Gramophone, Film, Typewriter}. Stanford University Press, 1999. Pose la tripartition Speicherung/\"Ubertragung/Verarbeitung (stockage/transmission/traitement) comme structure fondamentale des m\'{e}dias techniques, ant\'{e}rieure et post\'{e}rieure \`{a} la convergence sur l'ordinateur num\'{e}rique. Source la plus explicite sur la tripartition comme cadre analytique des m\'{e}dias.},
+}
+
+--- Source (ignoré) ---
+
+@book{kittler_grammophon_1986,
+  author    = {Kittler, Friedrich A.},
+  title     = {Grammophon, Film, Typewriter},
+  publisher = {Brinkmann \& Bose},
+  address   = {Berlin},
+  year      = {1986},
+  note      = {Traduction anglaise~: \emph{Gramophone, Film, Typewriter}. Stanford University Press, 1999. Pose la tripartition Speicherung/\"Ubertragung/Verarbeitung (stockage/transmission/traitement) comme structure fondamentale des m\'edias techniques, ant\'erieure et post\'erieure \`a la convergence sur l'ordinateur num\'erique.},
+}
+
+
+=== bailly_mathematics_2011 (source: longo_kittler_refs.bib) ===
+
+--- Bibliography.bib (gardé) ---
+
+@book{bailly_mathematics_2011,
+  author    = {Bailly, Francis and Longo, Giuseppe},
+  title     = {Mathematics and the Natural Sciences: The Physical Singularity of Life},
+  publisher = {Imperial College Press},
+  address   = {London},
+  year      = {2011},
+  note      = {Fondement math\'{e}matique de la distinction discret/continu. Longo (math\'{e}maticien-logicien, ENS Paris) collabore avec Stiegler dans les s\'{e}minaires de l'IRI (Institut de Recherche et d'Innovation, Centre Pompidou) sur la grammatisation num\'{e}rique et la r\'{e}duction du monde au calculable au discret.},
+}
+
+--- Source (ignoré) ---
+
+@book{bailly_mathematics_2011,
+  author    = {Bailly, Francis and Longo, Giuseppe},
+  title     = {Mathematics and the Natural Sciences: The Physical Singularity of Life},
+  publisher = {Imperial College Press},
+  address   = {London},
+  year      = {2011},
+  note      = {Fondement math\'ematique de la distinction discret/continu. Longo (math\'ematicien-logicien, ENS Paris) collabore avec Stiegler dans les s\'eminaires de l'IRI (Institut de Recherche et d'Innovation, Centre Pompidou) sur la grammatisation num\'erique et la r\'eduction du monde au calculable.},
+}
+
+

@@ -1,0 +1,30 @@
+
+
+% ─────────────────────────────────────────────────────────────────────────────
+% Ajout 18 avril 2026 — Hilbert & López + Spreng (pour footnote VdK enrichie)
+% ─────────────────────────────────────────────────────────────────────────────
+
+@article{hilbert_worlds_2011,
+  author  = {Hilbert, Martin and L{\'o}pez, Priscila},
+  title   = {The World's Technological Capacity to Store, Communicate, and Compute Information},
+  journal = {Science},
+  year    = {2011},
+  volume  = {332},
+  number  = {6025},
+  pages   = {60--65},
+  doi     = {10.1126/science.1200970},
+}
+
+@incollection{spreng_interdependency_2015,
+  author    = {Spreng, Daniel T.},
+  title     = {The Interdependency of Energy, Information, and Growth},
+  booktitle = {ICT Innovations for Sustainability},
+  editor    = {Hilty, Lorenz M. and Aebischer, Bernard},
+  year      = {2015},
+  publisher = {Springer},
+  address   = {Cham},
+  pages     = {425--434},
+  doi       = {10.1007/978-3-319-09228-7_25},
+  series    = {Advances in Intelligent Systems and Computing},
+  volume    = {310},
+}

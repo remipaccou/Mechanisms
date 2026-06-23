@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 60 1120 800" width="1120" height="800">
+  <style>
+    text { font-family: serif; }
+    .title { font-size: 20px; font-weight: bold; fill: #1e1e1e; }
+    .pharmakon { font-size: 12px; fill: #8b5cf6; font-style: italic; }
+    .var { font-size: 13px; fill: #1e1e1e; text-anchor: middle; }
+    .loop { font-size: 14px; font-weight: bold; }
+    .src { font-size: 10px; fill: #888; font-style: italic; }
+    .legend { font-size: 11px; fill: #888; }
+    .polarity { font-size: 18px; font-weight: bold; }
+  </style>
+  <defs>
+    <marker id="aB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#4a9eed"/></marker>
+    <marker id="aG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#22c55e"/></marker>
+    <marker id="aO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#f59e0b"/></marker>
+    <marker id="aR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#ef4444"/></marker>
+  </defs>
+  <text x="530" y="95" class="title" text-anchor="middle">Diagramme de boucles causales — Cas du télégraphe</text>
+  <text x="530" y="115" class="pharmakon" text-anchor="middle">R1+R2 = entropie-réducteur · B1+R3+R4 = entropie-producteur</text>
+  <ellipse cx="530" cy="400" rx="100" ry="38" fill="#d0bfff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="530" y="396" class="var">Réseau ICT</text>
+  <text x="530" y="412" class="var">(déploiement)</text>
+  <rect x="30" y="210" width="170" height="50" rx="8" fill="#a5d8ff" stroke="#4a9eed" stroke-width="2"/>
+  <text x="115" y="232" class="var">Frictions</text><text x="115" y="248" class="var">informationnelles</text>
+  <line x1="435" y1="378" x2="202" y2="255" stroke="#4a9eed" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="330" y="298" class="polarity" fill="#4a9eed">—</text>
+  <rect x="30" y="520" width="170" height="50" rx="8" fill="#b2f2bb" stroke="#22c55e" stroke-width="2"/>
+  <text x="115" y="542" class="var">Volume de</text><text x="115" y="558" class="var">commerce</text>
+  <line x1="115" y1="260" x2="115" y2="520" stroke="#4a9eed" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="128" y="395" class="polarity" fill="#4a9eed">—</text>
+  <line x1="200" y1="540" x2="438" y2="418" stroke="#22c55e" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="330" y="468" class="polarity" fill="#22c55e">+</text>
+  <text x="25" y="400" class="loop" fill="#4a9eed">R1</text>
+  <text x="25" y="418" style="font-size:11px;fill:#4a9eed">Intégration</text>
+  <text x="25" y="434" style="font-size:11px;fill:#4a9eed">marchande</text>
+  <text x="30" y="195" class="src">Steinwender, Ejrnæs, Hao, Andrabi</text>
+  <rect x="790" y="210" width="170" height="50" rx="8" fill="#a5d8ff" stroke="#4a9eed" stroke-width="2"/>
+  <text x="875" y="232" class="var">Contrôle</text><text x="875" y="248" class="var">logistique</text>
+  <line x1="625" y1="380" x2="790" y2="252" stroke="#4a9eed" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="720" y="298" class="polarity" fill="#4a9eed">+</text>
+  <rect x="790" y="360" width="170" height="50" rx="8" fill="#ffd8a8" stroke="#f59e0b" stroke-width="2"/>
+  <text x="875" y="382" class="var">Capital physique</text><text x="875" y="398" class="var">nécessaire</text>
+  <line x1="875" y1="260" x2="875" y2="360" stroke="#4a9eed" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="888" y="315" class="polarity" fill="#4a9eed">—</text>
+  <text x="970" y="290" class="loop" fill="#8b5cf6">R2</text>
+  <text x="970" y="308" style="font-size:11px;fill:#8b5cf6">Substitution</text>
+  <text x="970" y="324" style="font-size:11px;fill:#8b5cf6">capital</text>
+  <text x="830" y="198" class="src">Field 1992</text>
+  <rect x="790" y="510" width="170" height="50" rx="8" fill="#b2f2bb" stroke="#22c55e" stroke-width="2"/>
+  <text x="875" y="532" class="var">Efficacité</text><text x="875" y="548" class="var">transport</text>
+  <line x1="875" y1="410" x2="875" y2="510" stroke="#22c55e" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="888" y="465" class="polarity" fill="#22c55e">—</text>
+  <rect x="790" y="660" width="170" height="50" rx="8" fill="#b2f2bb" stroke="#22c55e" stroke-width="2"/>
+  <text x="875" y="690" class="var">Trafic</text>
+  <line x1="875" y1="560" x2="875" y2="660" stroke="#22c55e" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="888" y="615" class="polarity" fill="#22c55e">+</text>
+  <rect x="460" y="730" width="200" height="50" rx="8" fill="#ffc9c9" stroke="#ef4444" stroke-width="2"/>
+  <text x="560" y="752" class="var">Consommation</text><text x="560" y="768" class="var">d'énergie (charbon)</text>
+  <line x1="790" y1="700" x2="660" y2="745" stroke="#ef4444" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="735" y="712" class="polarity" fill="#ef4444">+</text>
+  <text x="970" y="615" class="loop" fill="#ef4444">R3</text>
+  <text x="970" y="633" style="font-size:11px;fill:#ef4444">Jevons</text>
+  <text x="970" y="649" style="font-size:11px;fill:#ef4444">ferroviaire</text>
+  <text x="490" y="795" class="src">Conjecture (non sourcé)</text>
+  <rect x="260" y="620" width="170" height="50" rx="8" fill="#ffd8a8" stroke="#f59e0b" stroke-width="2"/>
+  <text x="345" y="642" class="var">Demande</text><text x="345" y="658" class="var">matériaux</text>
+  <line x1="485" y1="432" x2="365" y2="620" stroke="#f59e0b" stroke-width="2" marker-end="url(#aO)"/>
+  <text x="405" y="520" class="polarity" fill="#f59e0b">+</text>
+  <rect x="40" y="700" width="170" height="50" rx="8" fill="#ffc9c9" stroke="#ef4444" stroke-width="2"/>
+  <text x="125" y="722" class="var">Prix des</text><text x="125" y="738" class="var">matériaux</text>
+  <line x1="260" y1="660" x2="210" y2="710" stroke="#f59e0b" stroke-width="2" marker-end="url(#aO)"/>
+  <text x="222" y="675" class="polarity" fill="#f59e0b">+</text>
+  <path d="M 125 700 Q 100 500 430 395" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="215" y="510" class="polarity" fill="#ef4444">—</text>
+  <text x="100" y="640" class="loop" fill="#f59e0b">B1</text>
+  <text x="100" y="658" style="font-size:11px;fill:#f59e0b">Matérialité</text>
+  <text x="100" y="674" style="font-size:11px;fill:#f59e0b">extractive</text>
+  <text x="45" y="765" class="src">Tully 2009, FitzMaurice 2023</text>
+  <rect x="350" y="160" width="170" height="50" rx="8" fill="#a5d8ff" stroke="#4a9eed" stroke-width="2"/>
+  <text x="435" y="182" class="var">Connectivité</text><text x="435" y="198" class="var">informationnelle</text>
+  <line x1="530" y1="362" x2="470" y2="210" stroke="#4a9eed" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="512" y="280" class="polarity" fill="#4a9eed">+</text>
+  <rect x="590" y="135" width="155" height="45" rx="8" fill="#b2f2bb" stroke="#22c55e" stroke-width="2"/>
+  <text x="668" y="160" class="var" style="font-size:12px">Stabilisation prix locaux</text>
+  <line x1="520" y1="175" x2="590" y2="162" stroke="#22c55e" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="555" y="160" style="font-size:14px;font-weight:bold;fill:#22c55e">+</text>
+  <rect x="590" y="220" width="155" height="45" rx="8" fill="#ffc9c9" stroke="#ef4444" stroke-width="2"/>
+  <text x="668" y="246" class="var" style="font-size:12px">Contagion chocs distants</text>
+  <line x1="520" y1="195" x2="590" y2="235" stroke="#ef4444" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="555" y="225" style="font-size:14px;font-weight:bold;fill:#ef4444">+</text>
+  <text x="760" y="155" class="loop" fill="#ef4444">R4</text>
+  <text x="760" y="173" style="font-size:11px;fill:#ef4444">Risk-sharing</text>
+  <text x="760" y="189" style="font-size:11px;fill:#ef4444">/ contagion</text>
+  <text x="615" y="278" class="src">Gao et Lei 2021</text>
+  <text x="30" y="830" class="legend">R = boucle renforçante · B = boucle équilibrante · + / — = polarité du lien causal</text>
+</svg>

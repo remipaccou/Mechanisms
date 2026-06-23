@@ -1,0 +1,21 @@
+%*******************************************************
+% Sommaire (front) — chapitres seulement
+% La table des matières détaillée est en fin de document
+%*******************************************************
+\pdfbookmark[1]{Sommaire}{sommaire}
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\cleardoublepage
+
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+
+\pdfbookmark[1]{Sommaire détaillé}{contents}
+
+\medskip
+
+{\small\noindent\textit{La table des matières détaillée, la liste des figures, la liste des tableaux et l'index se trouvent en fin de volume.}}
+
+\endgroup

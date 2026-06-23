@@ -1,0 +1,30 @@
+%*******************************************************
+% Backmatter — en fin de volume (style Pottier)
+%*******************************************************
+
+% ─── Table des figures ───────────────────────────────────────────────────────
+\phantomsection
+\refstepcounter{dummy}
+\addcontentsline{toc}{chapter}{\tocEntry{Table des figures}}
+\listoffigures
+
+\cleardoublepage
+
+% ─── Liste des tableaux ─────────────────────────────────────────────────────
+\phantomsection
+\refstepcounter{dummy}
+\addcontentsline{toc}{chapter}{\tocEntry{Liste des tableaux}}
+\listoftables
+
+\cleardoublepage
+
+% ─── Table des matières détaillée ────────────────────────────────────────────
+\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{Table des matières}{detailedtoc}
+\makeatletter
+\chapter*{Table des matières}
+\@mkboth{\spacedlowsmallcaps{Table des matières}}{\spacedlowsmallcaps{Table des matières}}
+\setcounter{tocdepth}{2}
+\@starttoc{toc}
+\makeatother
