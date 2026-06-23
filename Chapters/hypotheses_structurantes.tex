@@ -1,0 +1,14 @@
+python3 - <<'PY'
+from pathlib import Path
+
+p = Path("ClassicThesis.tex")
+s = p.read_text(encoding="utf-8")
+
+needle = r"\include{Chapters/Chapter02}"
+insert = r"\include{Chapters/hypotheses_structurantes}"
+
+if insert not in s:
+    s = s.replace(needle, needle + "\n" + insert)
+
+p.write_text(s, encoding="utf-8")
+PY
